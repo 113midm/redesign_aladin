@@ -1,35 +1,337 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aladin</title>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- font -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- 내 파일 -->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
 </head>
+
 <body>
-    <div>Hello!!
-        사전 등록하기
-        ctrl + ~ >>>> git init + enter >>>> 폴더에 투명한 git 폴더(로컬 저장소) 생성됨 >>>>
-        터미널에 git config user.name "113midm" >>>> git config user.email "tivm7123@gmail.com" >>>>
-        git config user.name 닉네임 확인 / git config user.email 이메일 확인 >>>>
-        git remote add origin https://github.com/113midm/redesign_aladin >>>>
-        git remote -v 리포지터리 주소 확인
-
-        장바구니에 넣기
-        git add . + enter >>>> git status 확인(초록 글씨, new file: index.html)
-
-        로컬 저장소에 넣기
-        git commit -m "220421_작업 시작" >>>> git status 확인(없음!)
-
-        리포지터리(원격 저장소)에 넣는 방법
-        git push origin master >>>> 초록 버튼 누르기
-    </div>
-    <div>안녕안녕!!</div>
-    <div>
-        ctrl + ~ >>>> git init + enter >>>> 폴더에 투명한 git 폴더(로컬 저장소) 생성됨 >>>>
-        터미널에 git config user.name "113midm" >>>> git config user.email "tivm7123@gmail.com" >>>>
-        git config user.name 닉네임 확인 / git config user.email 이메일 확인 >>>>
-        git remote add origin https://github.com/113midm/redesign_aladin >>>> git pull origin master
+    <div id="wrap">
+        <div class="header">
+            <div class="header_logo">
+                <div class="container">
+                    <a href="https://www.aladin.co.kr/home/welcome.aspx">
+                        <img src="https://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif" alt="header_logo_img">
+                    </a>
+                </div>
+            </div>
+            <div class="header_search">
+                <div class="container">
+                    <div class="inner">
+                        <input type="text" placeholder="검색어를 입력하세요" onfocus="this.placeholder = ''" onblur="this.placeholder='검색어를 입력하세요'">
+                        <button></button>
+                    </div>
+                    <div class="header_side-menu">
+                        <ul class="float-grid">
+                            <li class="btn-my">
+                                <button></button>
+                                <ul class="sub-menu float-grid">
+                                    <li><a href="#">로그인</a></li>
+                                    <li><a href="#">회원가입</a></li>
+                                    <li><a href="#">마이페이지</a></li>
+                                </ul>
+                            </li>
+                            <li class="btn-cart"><button></button></li>
+                            <li class="btn-customer">
+                                <button></button>
+                                <ul class="sub-menu">
+                                    <li>1544-2514</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-ad">
+                        <a href="#" class="img-box">
+                            <img src="https://image.aladin.co.kr/img/bn/ebook/2022/02/left_220411_MD.jpg" alt="header-ad-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header_menu">
+                <div class="container">
+                    <div class="inner">
+                        <ul>
+                            <div>
+                                <li class="btn-category"><span>전체 카테고리 보기</span></li>
+                                <li><a href="#">중고매장 찾기</a></li>
+                                <li><a href="#">알라딘 굿즈</a></li>
+                                <li class="hashtag"><a href="#">#해리포터</a></li>
+                                <li class="hashtag"><a href="#">#김영하</a></li>
+                                <li class="hashtag"><a href="#">#롤랑의 노래</a></li>
+                                <li class="hashtag"><a href="#">#에세이</a></li>
+                                <li class="hashtag"><a href="#">#이자람</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-category">
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <div class="title">국내도서</div>
+                                <div class="text float-grid">
+                                    <ul>
+                                        <li><a href="#">유아</a></li>
+                                        <li><a href="#">어린이</a></li>
+                                        <li><a href="#">전집/중고전집</a></li>
+                                        <li><a href="#">청소년</a></li>
+                                        <li><a href="#">좋은부모</a></li>
+                                        <li><a href="#">초등학교참고서</a></li>
+                                        <li><a href="#">중학교참고서</a></li>
+                                        <li><a href="#">고등학교참고서</a></li>
+                                        <li><a href="#">여행</a></li>
+                                        <li><a href="#">가정/요리/뷰티</a></li>
+                                        <li><a href="#">건강/취미/레저</a></li>
+                                        <li><a href="#">달력/기타</a></li>
+                                        <li><a href="#">잡지</a></li>
+                                        <li><a href="#">만화</a></li>
+                                        <li><a href="#">고전</a></li>
+                                        <li><a href="#">소설/시/희곡</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">장르소설</a></li>
+                                        <li><a href="#">에세이</a></li>
+                                        <li><a href="#">인문학</a></li>
+                                        <li><a href="#">사회과학</a></li>
+                                        <li><a href="#">역사</a></li>
+                                        <li><a href="#">과학</a></li>
+                                        <li><a href="#">예술/대중문화</a></li>
+                                        <li><a href="#">종교/역학</a></li>
+                                        <li><a href="#">경제경영</a></li>
+                                        <li><a href="#">자기계발</a></li>
+                                        <li><a href="#">외국어</a></li>
+                                        <li><a href="#">컴퓨터/모바일</a></li>
+                                        <li><a href="#">대학교재</a></li>
+                                        <li><a href="#">수험서/자격증</a></li>
+                                        <li><a href="#">공무원 수험서</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">외국도서</div>
+                                <div class="text float-grid">
+                                    <ul>
+                                        <li><a href="#">영미도서</a></li>
+                                        <li><a href="#">소설/시/희곡</a></li>
+                                        <li><a href="#">ELT/어학/사전</a></li>
+                                        <li><a href="#">인문/사회</a></li>
+                                        <li><a href="#">경제경영</a></li>
+                                        <li><a href="#">자기계발</a></li>
+                                        <li><a href="#">자연과학</a></li>
+                                        <li><a href="#">컴퓨터</a></li>
+                                        <li><a href="#">예술/대중문화</a></li>
+                                        <li><a href="#">가정/원예/인테리어</a></li>
+                                        <li><a href="#">공예/취미/수집</a></li>
+                                        <li><a href="#">여행</a></li>
+                                        <li><a href="#">건강/스포츠</a></li>
+                                        <li><a href="#">청소년</a></li>
+                                        <li><a href="#">해외잡지</a></li>
+                                        <li><a href="#">일본도서</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">잡지</a></li>
+                                        <li><a href="#">코믹</a></li>
+                                        <li><a href="#">문학</a></li>
+                                        <li><a href="#">실용/취미/생활</a></li>
+                                        <li><a href="#">애니메이션 굿즈</a></li>
+                                        <li><a href="#">중국도서</a></li>
+                                        <li><a href="#">소설</a></li>
+                                        <li><a href="#">중국어 교재</a></li>
+                                        <li><a href="#">어린이</a></li>
+                                        <li><a href="#">캐릭터</a></li>
+                                        <li><a href="#">그림책</a></li>
+                                        <li><a href="#">리더스</a></li>
+                                        <li><a href="#">챕터북</a></li>
+                                        <li><a href="#">동화책</a></li>
+                                        <li><a href="#">오디오북</a></li>
+                                        <li><a href="#">어린이사전</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">개념학습</a></li>
+                                        <li><a href="#">코스북</a></li>
+                                        <li><a href="#">영어학습</a></li>
+                                        <li><a href="#">교과학습</a></li>
+                                        <li><a href="#">미국교과서</a></li>
+                                        <li><a href="#">수상작</a></li>
+                                        <li><a href="#">제2외국어/이중언어</a></li>
+                                        <li><a href="#">기타 언어권</a></li>
+                                        <li><a href="#">프랑스 도서</a></li>
+                                        <li><a href="#">독일 도서</a></li>
+                                        <li><a href="#">스페인 도서</a></li>
+                                        <li><a href="#">베트남 도서</a></li>
+                                        <li><a href="#">기타 도서</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">eBook</div>
+                                <div class="text float-grid">
+                                    <ul>
+                                        <li><a href="#">소설/시</a></li>
+                                        <li><a href="#">로맨스</a></li>
+                                        <li><a href="#">라이트노벨</a></li>
+                                        <li><a href="#">판타지/무협</a></li>
+                                        <li><a href="#">만화</a></li>
+                                        <li><a href="#">BL</a></li>
+                                        <li><a href="#">에세이</a></li>
+                                        <li><a href="#">자기계발</a></li>
+                                        <li><a href="#">경제경영</a></li>
+                                        <li><a href="#">사회과학</a></li>
+                                        <li><a href="#">인문학</a></li>
+                                        <li><a href="#">역사</a></li>
+                                        <li><a href="#">청소년</a></li>
+                                        <li><a href="#">예술/대중문화</a></li>
+                                        <li><a href="#">종교/역학</a></li>
+                                        <li><a href="#">어린이</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">eBook 뷰어</div>
+                                <div class="text float-grid">
+                                    <ul>
+                                        <li><a href="#">아이폰 뷰어</a></li>
+                                        <li><a href="#">안드로이드 뷰어</a></li>
+                                        <li><a href="#">PC 뷰어</a></li>
+                                        <li><a href="#">크레마</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">온라인 중고샵</div>
+                                <div class="text float-grid">
+                                    <ul>
+                                        <li><a href="#">중고매장</a></li>
+                                        <li><a href="#">중고 국내도서</a></li>
+                                        <li><a href="#">소설/시/희곡</a></li>
+                                        <li><a href="#">에세이</a></li>
+                                        <li><a href="#">어린이</a></li>
+                                        <li><a href="#">유아</a></li>
+                                        <li><a href="#">중고전집</a></li>
+                                        <li><a href="#">경제경영</a></li>
+                                        <li><a href="#">인문학</a></li>
+                                        <li><a href="#">사회과학</a></li>
+                                        <li><a href="#">중고 음반</a></li>
+                                        <li><a href="#">중고 DVD/블루레이</a></li>
+                                        <li><a href="#">중고 외국도서</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">알라딘 굿즈</div>
+                                <div class="text float-grid">
+                                    <ul>
+                                        <li><a href="#">문구</a></li>
+                                        <li><a href="#">독서용품</a></li>
+                                        <li><a href="#">데스크용품</a></li>
+                                        <li><a href="#">디지털</a></li>
+                                        <li><a href="#">가방·파우치</a></li>
+                                        <li><a href="#">생활용품</a></li>
+                                        <li><a href="#">리빙·키친</a></li>
+                                        <li><a href="#">의류·잡화</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">음반</div>
+                                <div class="text float-grid">
+                                    <ul>
+                                        <li><a href="#">가요</a></li>
+                                        <li><a href="#">클래식</a></li>
+                                        <li><a href="#">팝</a></li>
+                                        <li><a href="#">재즈</a></li>
+                                        <li><a href="#">국악</a></li>
+                                        <li><a href="#">월드뮤직</a></li>
+                                        <li><a href="#">종교/명상/기타</a></li>
+                                        <li><a href="#">J-POP</a></li>
+                                        <li><a href="#">OST</a></li>
+                                        <li><a href="#">LP</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">블루레이/DVD</div>
+                                <div class="text float-grid">
+                                    <ul>
+                                        <li><a href="#">드라마/코미디</a></li>
+                                        <li><a href="#">TV시리즈</a></li>
+                                        <li><a href="#">액션/어드벤처</a></li>
+                                        <li><a href="#">S.F./판타지</a></li>
+                                        <li><a href="#">공포/스릴러</a></li>
+                                        <li><a href="#">애니메이션</a></li>
+                                        <li><a href="#">음악DVD</a></li>
+                                        <li><a href="#">블루레이</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="btn-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-bar">
+            <div class="container">
+                <ul>
+                    <div>
+                        <li><a href="#">
+                            <img src="image/aladin-logo-white.svg" alt="">
+                        </a></li>
+                        <li class="btn-sec-1"><a href="#">알라딘 추천 도서</a></li>
+                        <li class="btn-sec-2"><a href="#">알라딘 추천 음반</a></li>
+                        <li class="btn-sec-3"><a href="#">이 달의 이벤트</a></li>
+                        <li class="btn-sec-4"><a href="#">알라딘 중고매장</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#">장바구니</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li class="btn-search-topbar"><button></button></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="popup-search">
+                <div class="container">
+                    <div class="top">
+                        <input type="text" placeholder="검색어를 입력하세요" onfocus="this.placeholder = ''" onblur="this.placeholder='검색어를 입력하세요'">
+                        <button></button>
+                    </div>
+                    <div class="bottom">
+                        <ul>
+                            <div>
+                                <li><a href="#">중고매장 찾기</a></li>
+                                <li><a href="#">알라딘 굿즈</a></li>
+                                <li class="hashtag"><a href="#">#해리포터</a></li>
+                                <li class="hashtag"><a href="#">#김영하</a></li>
+                                <li class="hashtag"><a href="#">#롤랑의 노래</a></li>
+                                <li class="hashtag"><a href="#">#에세이</a></li>
+                                <li class="hashtag"><a href="#">#이자람</a></li>
+                                <li class="hashtag"><a href="#">#배우의 밤</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <button class="btn-close"></button>
+                </div>
+            </div>
+        </div>
+        <div class="section"></div>
     </div>
 </body>
+
 </html>
