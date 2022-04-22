@@ -78,7 +78,7 @@ header_logo
   border-bottom: 1px solid var(--gray);
 }
 .header_logo > div {
-  padding-top: 40px;
+  padding-top: 10px;
   text-align: center;
 }
 /* 
@@ -342,6 +342,7 @@ top-bar
 .top-bar {
   background-color: var(--main-color-blue);
   position: relative;
+  z-index: 999;
 }
 .top-bar.active {
   position: fixed;
@@ -418,5 +419,146 @@ section
 */
 .section {
   height: 200vh;
-  background-color: var(--gray);
+  /* background-color: aliceblue; */
+}
+/* 
+
+
+section-slide
+
+
+*/
+.section-slide {
+  border-bottom: 1px solid var(--gray);
+}
+.section-slide .swiper {
+  width: 100%;
+  height: 666px;
+}
+.section-slide .swiper-slide {
+  background-color: #fff;
+}
+.section-slide .swiper-slide > .inner {
+  padding-left: 160px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+.section-slide .swiper-slide > div > .img-box {
+  transform: translatex(-3%);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.section-slide .swiper-slide.swiper-slide-active > div > .img-box {
+  transform: translatex(0%);
+  opacity: 1;
+}
+.section-slide .swiper-slide > div > .img-box > img {
+  width: 353px;
+  height: 506px;
+  box-shadow: 2px 2px 4px var(--gray);
+}
+.section-slide .swiper-slide > div > .text-box {
+  width: 500px;
+  height: 506px;
+  margin-left: 100px;
+  position: relative;
+  transform: translatex(3%);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.section-slide .swiper-slide.swiper-slide-active > div > .text-box {
+  transform: translatex(0%);
+  opacity: 1;
+}
+.section-slide .swiper-slide .text-box > ul > .book-category > span {
+  font-family: "Noto Sans KR";
+  font-size: 15px;
+  background-color: var(--main-color-yellow);
+  border-radius: 15px;
+  padding: 2px 8px;
+}
+.section-slide .swiper-slide .text-box > ul > .book-title {
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.section-slide .swiper-slide .text-box > ul > .book-writer {
+  font-size: 20px;
+}
+.section-slide .swiper-slide .text-box > ul > .underline {
+  background-color: #111;
+  height: 5px;
+  width: 53px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.section-slide .swiper-slide .text-box > ul > .book-des {
+  font-size: 18px;
+  font-family: "Noto Sans KR";
+  line-height: 150%;
+  margin-bottom: 148px;
+}
+.section-slide .swiper-slide .text-box > ul > .book-event {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.section-slide .swiper-slide .text-box > ul > .book-event > .book-event_title {
+  display: inline-block;
+  background-color: var(--main-color-blue);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+.section-slide .swiper-slide .text-box > ul > .book-event > span:last-child {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  width: 500px;
+  display: inline-block;
+  font-family: "Noto Sans KR";
+  font-weight: bold;
+  font-size: 15px;
+}
+.section-slide .swiper-slide .text-box > .flag-box {
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+.section-slide .swiper-slide .text-box > .flag-box > img {
+  width: 33px;
+}
+.section-slide .swiper-slide .text-box > .flag-box > img:nth-child(2) {
+  margin-left: 4px;
+}
+/* 
+
+
+section-slide > slide-title
+
+
+*/
+.section-slide > div > .slide-title > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.section-slide > div > .slide-title > ul > li {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  line-height: 40px;
+  border: 1px solid var(--main-color-blue);
+  border-right: none;
+}
+.section-slide > div > .slide-title > ul > li:last-child {
+  border-right: 1px solid var(--main-color-blue);
+}
+.section-slide > div > .slide-title > ul > li.active,
+.section-slide > div > .slide-title > ul > li:hover {
+  color: #fff;
+  background-color: var(--main-color-blue);
 }
