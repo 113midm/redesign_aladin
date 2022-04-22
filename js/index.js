@@ -34,7 +34,7 @@ $("a").click(function () {
   return false;
 });
 
-const swiper = new Swiper(".swiper", {
+const swiper_main_slide = new Swiper(".swiper-main-slide", {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 10,
@@ -43,16 +43,6 @@ const swiper = new Swiper(".swiper", {
   autoplay: {
     delay: 5000,
     disableOnInteraction: true
-  },
-
-  pagination: {
-    el: ".swiper-pagination",
-    // type: 'progressbar', // 지우면 `bullet` 기본값, 'fraction', 'progressbar' 선택 가능
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
   },
 
   on: {
@@ -64,14 +54,30 @@ const swiper = new Swiper(".swiper", {
 });
 
 $(".slide-title > ul > li:first-child").click(function () {
-    swiper.slideTo(1, 1000, false);
+  swiper_main_slide.slideTo(1, 1000, false);
 });
 $(".slide-title > ul > li:nth-child(2)").click(function () {
-  swiper.slideTo(2, 1000, false);
+  swiper_main_slide.slideTo(2, 1000, false);
 });
 $(".slide-title > ul > li:nth-child(3)").click(function () {
-  swiper.slideTo(3, 1000, false);
+  swiper_main_slide.slideTo(3, 1000, false);
 });
 $(".slide-title > ul > li:nth-child(4)").click(function () {
-  swiper.slideTo(4, 1000, false);
+  swiper_main_slide.slideTo(4, 1000, false);
+});
+
+const swiper_recom = new Swiper(".swiper-recom", {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: true
+  // },
+
+  navigation: {
+    nextEl: ".swiper-recom .swiper-button-next",
+    prevEl: ".swiper-recom .swiper-button-prev"
+  },
 });
