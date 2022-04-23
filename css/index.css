@@ -62,6 +62,9 @@ input:focus {
   top: 100%;
 }
 /* custom */
+body {
+  overflow-x: hidden;
+}
 .container {
   max-width: 1200px;
   width: 100%;
@@ -276,7 +279,7 @@ popup-category
 */
 .popup-category {
   position: absolute;
-  top: 240px;
+  top: 250px;
   left: 0;
   right: 0;
   z-index: 900;
@@ -418,8 +421,7 @@ section
 
 */
 .section {
-  height: 200vh;
-  /* background-color: aliceblue; */
+  height: 400vh;
 }
 /* 
 
@@ -695,7 +697,6 @@ section-recom
   top: -12px;
   transform: rotate(180deg);
 }
-/* .section-recom > div > .swiper-recom > .swiper-button-box > .swiper-button-next::before  */
 .section-recom > div > .swiper-recom > .swiper-button-box > div::before {
   content: "";
   display: inline-block;
@@ -705,11 +706,189 @@ section-recom
   margin-bottom: 3px;
   transition: width 0.3s;
 }
-/* .section-recom > div > .swiper-recom > .swiper-button-box > .swiper-button-next:hover::before */
 .section-recom > div > .swiper-recom > .swiper-button-box > div:hover::before {
   width: 50px;
 }
-/* .section-recom > div > .swiper-recom > .swiper-button-box > .swiper-button-next > img */
 .section-recom > div > .swiper-recom > .swiper-button-box > div > img {
   margin-left: -10px;
+}
+/* 
+
+
+section-today
+
+
+*/
+.section-today {
+  position: relative;
+  height: 550px;
+}
+.section-today > .today-bg {
+  background-color: #018B7B;
+  height: 286px;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.section-today > .today-bg::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: -2px -4px 3px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: -61px;
+  left: 0;
+}
+.section-today > div > .title {
+  text-align: right;
+}
+.section-today > div > .title > h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 102px;
+}
+.section-today > div > .inner > div {
+  width: calc(100% / 2);
+}
+.section-today > div > .inner .book-img-box {
+  position: relative;
+  height: 450px;
+  overflow-y: hidden;
+  bottom: -12px;
+}
+.section-today > div > .inner .book-img-box > div {
+  position: absolute;
+}
+.section-today > div > .inner .book-img-box > .book-left {
+  top: 70px;
+  left: 25px;
+  transform: rotate(-5deg);
+}
+.section-today > div > .inner .book-img-box > .book-center {
+  top: 50px;
+  left: 120px;
+  z-index: 1;
+}
+.section-today > div > .inner .book-img-box > .book-right {
+  top: 70px;
+  left: 240px;
+  transform: rotate(5deg);
+}
+.section-today > div > .inner .book-img-box > div:not([class="book-center"]):hover .img-box {
+  transform: translateY(-7%);
+  cursor: pointer;
+}
+.section-today > div > .inner .book-img-box .img-box {
+  transition: all 0.3s;
+}
+.section-today > div > .inner .book-img-box .img-box > img {
+  width: 329px;
+}
+.section-today > div > .inner .book-text-box {
+  /* display: none; */
+  position: relative;
+}
+.section-today > div > .inner .book-text-box > div {
+  width: 230px;
+  position: absolute;
+  top: -360px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  transform: translateX(-100%);
+}
+.section-today > div > .inner .book-text-box > div.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0%);
+}
+.section-today > div > .inner .book-text-box > .book-left {
+  left: -232px;
+  text-align: right;
+  transform: translateX(100%);
+}
+.section-today > div > .inner .book-text-box > .book-right {
+  right: -226px;
+}
+.section-today > div > .inner .book-text-box > div .line > span {
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin-bottom: 8px;
+  background-color: #111;
+}
+.section-today > div > .inner .book-text-box > .book-left .line > span {
+  margin-left: auto;
+  margin-right: -10px;
+}
+.section-today > div > .inner .book-text-box > .book-right .line > span {
+  margin-right: auto;
+  margin-left: -10px;
+}
+.section-today > div > .inner .book-text-box > div .line > span:first-child {
+  width: 140px;
+  margin-bottom: 16px;
+}
+.section-today > div > .inner .book-text-box > div .book-title {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 150%;
+  margin-bottom: 4px;
+}
+.section-today > div > .inner .book-text-box > div .book-writer {
+  font-size: 15px;
+  line-height: 150%;
+}
+.section-today > div > .inner > .book-main {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 935px;
+}
+.section-today > div > .inner > .book-main > .text-box {
+  display: none;
+}
+.section-today > div > .inner > .book-main > .text-box.active {
+  display: block;
+}
+.section-today > div > .inner > .book-main > .text-box > .sent {
+  font-family: "Noto Sans KR";
+  font-size: 15px;
+  color: #fff;
+  line-height: 150%;
+  width: 486px;
+  font-weight: 300;
+}
+.section-today > div > .inner > .book-main > .text-box > .book-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 150%;
+  color: #fff;
+  margin-top: 34px;
+  margin-bottom: 8px;
+}
+.section-today > div > .inner > .book-main > .text-box > .book-writer {
+  font-size: 15px;
+  line-height: 150%;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.section-today > div > .inner > .book-main > .bg-box {
+  position: absolute;
+  bottom: -60px;
+  right: 377px;
+}
+.section-today > div > .inner > .book-main > .bg-box > img:first-child {
+  width: 277px;
+}
+.section-today > div > .inner > .book-main > .bg-box > img:last-child {
+  width: 184px;
+  margin-left: -93px;
+  margin-bottom: 61px;
 }
