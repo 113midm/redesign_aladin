@@ -371,6 +371,10 @@ top-bar
   margin-right: 24px;
   white-space: nowrap;
 }
+.top-bar div > li > a > img {
+  width: 46px;
+  margin-bottom: 6px;
+}
 .top-bar div > li[class^="btn-sec-"] {
   font-weight: bold;
 }
@@ -474,7 +478,8 @@ section-slide
   opacity: 1;
 }
 .section-slide .swiper-slide .text-box > ul > .book-category > span,
-.section-recom > div > .swiper-recom .swiper-slide .tag-box .book-category > span {
+.section-recom > div > .swiper-recom .swiper-slide .tag-box .book-category > span,
+.section-records > div > .swiper-records .tag-box .book-category > span {
   font-family: "Noto Sans KR";
   font-size: 15px;
   background-color: var(--main-color-yellow);
@@ -510,7 +515,8 @@ section-slide
   left: 0;
 }
 .section-slide .swiper-slide .text-box > ul > .book-event > .book-event_title,
-.section-recom > div > .swiper-recom .swiper-slide .tag-box .book-event_title {
+.section-recom > div > .swiper-recom .swiper-slide .tag-box .book-event_title,
+.section-records > div > .swiper-records .tag-box .book-event_title {
   display: inline-block;
   background-color: var(--main-color-blue);
   color: #fff;
@@ -722,6 +728,7 @@ section-today
 .section-today {
   position: relative;
   height: 550px;
+  margin-bottom: 88px;
 }
 .section-today > .today-bg {
   background-color: #018B7B;
@@ -891,4 +898,158 @@ section-today
   width: 184px;
   margin-left: -93px;
   margin-bottom: 61px;
+}
+/* 
+
+
+section-records
+
+
+*/
+.section-records > div {
+  margin-bottom: 140px;
+}
+.section-records > div > .title {
+  padding-top: 16px;
+  padding-left: 24px;
+  margin-bottom: 32px;
+}
+.section-records > div > .title > h1 {
+  margin-bottom: 32px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.section-records > div > .title li > a {
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: transparent;
+}
+.section-records > div > .title li.active > a,
+.section-records > div > .title li:hover > a {
+  color: #fff;
+  background-color: var(--main-color-blue);
+}
+.section-records > div > .title li:nth-child(2) {
+  margin: 0 30px;
+}
+.section-records > div > .swiper-records {
+  width: 100%;
+  height: 365px;
+  overflow: hidden;
+}
+.section-records > div > .swiper-records div[class^="slide_"] {
+  cursor: pointer;
+  margin-right: 25px;
+}
+.section-records > div > .swiper-records div[class^="slide_"]:nth-child(4n) {
+  margin-right: 0;
+}
+.section-records > div > .swiper-records .img-box {
+  width: 277px;
+  height: 277px;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 8px;
+}
+
+.section-records > div > .swiper-records div[class^="slide_"] .img-box > img {
+  transition: all 0.3s ease;
+}
+.section-records > div > .swiper-records div[class^="slide_"]:hover .img-box > img {
+  transform: scale(1.1);
+}
+.section-records > div > .swiper-records .tag-box > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.section-records > div > .swiper-records .tag-box > ul > li > span {
+  font-size: 10px !important;
+  margin-bottom: 0 !important;
+}
+.section-records > div > .swiper-records .text-box {
+  text-align: center;
+}
+.section-records > div > .swiper-records .text-box > * {
+  width: 277px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.section-records > div > .swiper-records div[class^="slide_"]:hover .text-box > .book-title {
+  text-decoration: underline 2px;
+}
+.section-records > div > .swiper-records .text-box > .book-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.section-records > div > .swiper-records .text-box > .book-writer {
+  font-size: 12px;
+}
+/* 
+
+
+section-event
+
+
+*/
+.section-event > .title-box {
+  background-color: var(--main-color-yellow);
+  overflow: hidden;
+}
+.section-event > .title-box > div > .title {
+  text-align: center;
+}
+.section-event > .title-box > div > .title > .img-box img {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  width: 80px;
+}
+.section-event > .title-box > div > .title > h1 {
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.section-event > .title-box > div > .sub-title > ul > li {
+  position: relative;
+}
+.section-event > .title-box > div > .sub-title > ul > li:nth-child(5) {
+  clear: both;
+}
+.section-event > .title-box > div > .sub-title > ul > li > a {
+  font-size: 18px;
+  display: inline-block;
+  width: 277px;
+  height: calc(102px / 2);
+  text-align: center;
+  line-height: calc(102px / 2);
+}
+.section-event > .title-box > div > .sub-title > ul > li.active > a {
+  font-weight: bold;
+  background-color: #FFEFCF;
+}
+.section-event > .title-box > div > .sub-title > ul > li.active::after {
+  content: "";
+  display: inline-block;
+  background-color: #FFEFCF;
+  width: 277px;
+  height: calc(102px / 2);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.section-event > .contents-box {
+  background-color: #FFEFCF;
+  height: 750px;
+}
+.section-event > .contents-box .swiper-event {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
