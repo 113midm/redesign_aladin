@@ -80,6 +80,18 @@ function Topbar_scroll_2() {
   });
 }
 
+function Topbar_scroll_3() {
+  //'탑바-이 달의 이벤트' 클릭하면 '이벤트' 위치로 이동
+  $(".top-bar .btn-sec-3 > a").click(function () {
+    $("html, body").animate({
+        scrollTop: 2870
+      },
+      500
+    );
+    return false;
+  });
+}
+
 function SectionSlide_init() {
   //'메인 슬라이드'
   const swiper_main_slide = new Swiper(".swiper-main-slide", {
@@ -293,6 +305,32 @@ function SectionEvent_init(){
       }
     }
   });
+
+  //'이벤트 슬라이드' 목록 클릭하는대로 슬라이드 이동
+  $(".section-event .sub-title > ul > li:first-child > a").click(function () {
+    swiper_event.slideTo(1, 1000, false);
+  });
+  $(".section-event .sub-title > ul > li:nth-child(2) > a").click(function () {
+    swiper_event.slideTo(2, 1000, false);
+  });
+  $(".section-event .sub-title > ul > li:nth-child(3) > a").click(function () {
+    swiper_event.slideTo(3, 1000, false);
+  });
+  $(".section-event .sub-title > ul > li:nth-child(4) > a").click(function () {
+    swiper_event.slideTo(4, 1000, false);
+  });
+  $(".section-event .sub-title > ul > li:nth-child(5) > a").click(function () {
+    swiper_event.slideTo(5, 1000, false);
+  });
+  $(".section-event .sub-title > ul > li:nth-child(6) > a").click(function () {
+    swiper_event.slideTo(6, 1000, false);
+  });
+  $(".section-event .sub-title > ul > li:nth-child(7) > a").click(function () {
+    swiper_event.slideTo(7, 1000, false);
+  });
+  $(".section-event .sub-title > ul > li:nth-child(8) > a").click(function () {
+    swiper_event.slideTo(8, 1000, false);
+  });
 }
 
 Header_init();
@@ -300,6 +338,7 @@ Topbar_init();
 Topbar_scroll_0();
 Topbar_scroll_1();
 Topbar_scroll_2();
+Topbar_scroll_3();
 SectionSlide_init();
 SectionRecom_init();
 SectionToday_init();

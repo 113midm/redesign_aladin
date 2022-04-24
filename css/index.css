@@ -1006,15 +1006,15 @@ section-event
   text-align: center;
 }
 .section-event > .title-box > div > .title > .img-box img {
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: 8px;
-  width: 80px;
+  width: 70px;
 }
 .section-event > .title-box > div > .title > h1 {
   font-weight: bold;
   font-size: 25px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .section-event > .title-box > div > .sub-title > ul > li {
   position: relative;
@@ -1026,27 +1026,18 @@ section-event
   font-size: 18px;
   display: inline-block;
   width: 277px;
-  height: calc(102px / 2);
+  height: calc((102px / 2) - 10px);
   text-align: center;
-  line-height: calc(102px / 2);
+  line-height: calc((102px / 2) - 10px);
+  margin-bottom: 10px;
 }
 .section-event > .title-box > div > .sub-title > ul > li.active > a {
   font-weight: bold;
+  border-radius: 50px;
   background-color: #FFEFCF;
-}
-.section-event > .title-box > div > .sub-title > ul > li.active::after {
-  content: "";
-  display: inline-block;
-  background-color: #FFEFCF;
-  width: 277px;
-  height: calc(102px / 2);
-  position: absolute;
-  top: 100%;
-  left: 0;
 }
 .section-event > .contents-box {
-  background-color: #FFEFCF;
-  height: 750px;
+  height: 710px;
 }
 .section-event > .contents-box .swiper-event {
   width: 100%;
