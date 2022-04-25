@@ -425,7 +425,7 @@ section
 
 */
 .section {
-  height: 400vh;
+  height: 600vh;
 }
 /* 
 
@@ -479,7 +479,8 @@ section-slide
 }
 .section-slide .swiper-slide .text-box > ul > .book-category > span,
 .section-recom > div > .swiper-recom .swiper-slide .tag-box .book-category > span,
-.section-records > div > .swiper-records .tag-box .book-category > span {
+.section-records > div > .swiper-records .tag-box .book-category > span,
+.section-used > div > .swiper-used .tag-box .book-category > span {
   font-family: "Noto Sans KR";
   font-size: 15px;
   background-color: var(--main-color-yellow);
@@ -516,7 +517,8 @@ section-slide
 }
 .section-slide .swiper-slide .text-box > ul > .book-event > .book-event_title,
 .section-recom > div > .swiper-recom .swiper-slide .tag-box .book-event_title,
-.section-records > div > .swiper-records .tag-box .book-event_title {
+.section-records > div > .swiper-records .tag-box .book-event_title,
+.section-used > div > .swiper-used .tag-box .book-event_title {
   display: inline-block;
   background-color: var(--main-color-blue);
   color: #fff;
@@ -618,14 +620,16 @@ section-recom
   border-radius: 20px;
   line-height: 1;
 }
-.section-recom > div > .swiper-recom {
+.section-recom > div > .swiper-recom,
+.section-used > div > .swiper-used {
   width: 100%;
   height: 418px;
   overflow: hidden;
   position: relative;
   padding-top: 60px;
 }
-.section-recom > div > .swiper-recom div[class^="slide_"] {
+.section-recom > div > .swiper-recom div[class^="slide_"],
+.section-used > div > .swiper-used div[class^="slide_"] {
   width: 278px;
   height: 354px;
   box-shadow: 2px 2px 4px var(--gray);
@@ -633,30 +637,38 @@ section-recom
   cursor: pointer;
   margin-right: 29px;
 }
-.section-recom > div > .swiper-recom div[class^="slide_"]:nth-child(4n) {
+.section-recom > div > .swiper-recom div[class^="slide_"]:nth-child(4n),
+.section-used > div > .swiper-used div[class^="slide_"] :nth-child(4n){
   margin-right: 0px;
 }
-.section-recom > div > .swiper-recom div[class^="slide_"]:hover .text-box {
+.section-recom > div > .swiper-recom div[class^="slide_"]:hover .text-box,
+.section-used > div > .swiper-used div[class^="slide_"]:hover .text-box {
   transform: translateY(0%);
 }
-.section-recom > div > .swiper-recom div[class^="slide_"] > .inner {
+.section-recom > div > .swiper-recom div[class^="slide_"] > .inner,
+.section-used > div > .swiper-used div[class^="slide_"] > .inner {
   position: relative;
   padding: 14px 36px;
 }
-.section-recom > div > .swiper-recom .swiper-slide .tag-box > ul {
+.section-recom > div > .swiper-recom .swiper-slide .tag-box > ul,
+.section-used > div > .swiper-used .tag-box > ul {
   display: flex;
   justify-content: space-between;
 }
 .section-recom > div > .swiper-recom .swiper-slide .tag-box .book-category > span,
-.section-recom > div > .swiper-recom .swiper-slide .tag-box .book-event_title {
+.section-recom > div > .swiper-recom .swiper-slide .tag-box .book-event > .book-event_title,
+.section-used > div > .swiper-used .tag-box .book-category > span,
+.section-used > div > .swiper-used .tag-box .book-event > .book-event_title {
   font-size: 10px;
   margin-bottom: 16px;
 }
-.section-recom > div > .swiper-recom .swiper-slide .img-box > img {
+.section-recom > div > .swiper-recom .swiper-slide .img-box > img,
+.section-used > div > .swiper-used .img-box > img {
   width: 206px;
   height: 290px;
 }
-.section-recom > div > .swiper-recom .swiper-slide .text-box {
+.section-recom > div > .swiper-recom .swiper-slide .text-box,
+.section-used > div > .swiper-used .text-box {
   text-align: center;
   position: absolute;
   bottom: 0;
@@ -668,17 +680,20 @@ section-recom
   transform: translateY(100%);
   transition: transform 0.3s;
 }
-.section-recom > div > .swiper-recom .swiper-slide .text-box > .book-title {
+.section-recom > div > .swiper-recom .swiper-slide .text-box > .book-title,
+.section-used > div > .swiper-used .text-box > .book-title {
   font-weight: bold;
   font-size: 16px;
   color: #fff;
 }
-.section-recom > div > .swiper-recom .swiper-slide .text-box > .book-writer {
+.section-recom > div > .swiper-recom .swiper-slide .text-box > .book-writer,
+.section-used > div > .swiper-used .text-box > .book-writer {
   font-size: 12px;
   margin: 8px 0;
   color: #fff;
 }
-.section-recom > div > .swiper-recom .swiper-slide .text-box > .book-des {
+.section-recom > div > .swiper-recom .swiper-slide .text-box > .book-des,
+.section-used > div > .swiper-used .text-box > .book-des {
   font-size: 10px;
   color: #fff;
 }
@@ -909,17 +924,20 @@ section-records
 .section-records > div {
   margin-bottom: 140px;
 }
-.section-records > div > .title {
+.section-records > div > .title,
+.section-used > div > .title {
   padding-top: 16px;
   padding-left: 24px;
   margin-bottom: 32px;
 }
-.section-records > div > .title > h1 {
+.section-records > div > .title > h1,
+.section-used > div > .title > h1 {
   margin-bottom: 32px;
   font-size: 25px;
   font-weight: bold;
 }
-.section-records > div > .title li > a {
+.section-records > div > .title li > a,
+.section-used > div > .title li > a {
   font-weight: bold;
   font-size: 18px;
   display: inline-block;
@@ -928,11 +946,14 @@ section-records
   background-color: transparent;
 }
 .section-records > div > .title li.active > a,
-.section-records > div > .title li:hover > a {
+.section-records > div > .title li:hover > a,
+.section-used > div > .title li.active > a,
+.section-used > div > .title li:hover > a {
   color: #fff;
   background-color: var(--main-color-blue);
 }
-.section-records > div > .title li:nth-child(2) {
+.section-records > div > .title li:nth-child(2),
+.section-used > div > .title li:nth-child(2) {
   margin: 0 30px;
 }
 .section-records > div > .swiper-records {
@@ -1038,9 +1059,201 @@ section-event
 }
 .section-event > .contents-box {
   height: 710px;
+  margin-bottom: 72px;
 }
 .section-event > .contents-box .swiper-event {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+.section-event > .contents-box .swiper-event .slide-8 > img {
+  cursor: pointer;
+}
+.section-event > .contents-box .swiper-event .slide-1 > button {
+  position: absolute;
+  top: 63%;
+  left: 43%;
+  display: block;
+  width: 283px;
+  height: 38px;
+  border-radius: 20px;
+  font-size: 0;
+}
+.section-event > .contents-box .swiper-event .slide-2 > button {
+  position: absolute;
+  display: inline-block;
+  width: 84px;
+  height: 28px;
+  border-radius: 19px;
+  font-size: 0;
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:first-of-type {
+  top: 30%;
+  left: 49%;
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(2) {
+  top: 35%;
+  left: 41%;
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(3) {
+  top: calc(40% - 2px);
+  left: calc(46% + 10px);
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(4) {
+  top: calc(45% - 3px);
+  left: calc(40% + 7px);
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(5) {
+  top: calc(31% - 6px);
+  left: calc(65% + 21px);
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(6) {
+  top: calc(36% - 7px);
+  left: calc(67% + 14px);
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(7) {
+  top: calc(41% - 9px);
+  left: calc(65% + 19px);
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(8) {
+  top: calc(71% - 14px);
+  left: calc(30% + 15px);
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(9) {
+  top: calc(71% - 14px);
+  left: calc(51% + 13px);
+}
+.section-event > .contents-box .swiper-event .slide-2 > button:nth-of-type(10) {
+  top: calc(71% - 14px);
+  left: calc(74% + 7px);
+}
+.section-event > .contents-box .swiper-event .slide-3 > button {
+  position: absolute;
+  display: inline-block;
+  border-radius: 31px;
+  width: 240px;
+  height: 240px;
+  transition: all 0.3s;
+  color: transparent;
+  font-size: 15px;
+  line-height: 150%;
+  padding: 10px;
+}
+.section-event > .contents-box .swiper-event .slide-3 > button > span {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  margin-bottom: 5px;
+  transition: all 0.3s;
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:hover {
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:hover > span {
+  background-color: #fff;
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:first-of-type {
+  top: calc(22% + 2px);
+  left: calc(19% - 2px);
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:nth-of-type(2) {
+  top: calc(22% + 2px);
+  left: calc(35% - -9px);
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:nth-of-type(3) {
+  top: calc(22% + 2px);
+  left: calc(52% - 0px);
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:nth-of-type(4) {
+  top: calc(22% + 2px);
+  left: calc(69% - 8px);
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:nth-of-type(5) {
+  top: calc(62% + -2px);
+  left: calc(19% - 2px);
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:nth-of-type(6) {
+  top: calc(62% + -2px);
+  left: calc(35% - -9px);
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:nth-of-type(7) {
+  top: calc(62% + -2px);
+  left: calc(52% - 0px);
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:nth-of-type(8) {
+  top: calc(62% + -2px);
+  left: calc(69% - 8px);
+  font-size: 0;
+}
+.section-event > .contents-box .swiper-event .slide-3 > button:nth-of-type(8):hover {
+  background-color: transparent;
+}
+.section-event > .contents-box .swiper-event .slide-4 > button {
+  position: absolute;
+  display: inline-block;
+  border-radius: 31px;
+  font-size: 0;
+  height: 43px;
+  bottom: 38px;
+}
+.section-event > .contents-box .swiper-event .slide-4 > button:first-of-type {
+  left: 35%;
+  width: 240px;
+}
+.section-event > .contents-box .swiper-event .slide-4 > button:nth-of-type(2) {
+  left: calc(53% + 7px);
+  width: 237px;
+}
+.section-event > .contents-box .swiper-event .slide-5 > button {
+  position: absolute;
+  display: inline-block;
+  border-radius: 31px;
+  font-size: 0;
+  width: 197px;
+  height: 38px;
+  bottom: 67px;
+  left: calc(45% + 9px);
+}
+.section-event > .contents-box .swiper-event .slide-6 > button {
+  position: absolute;
+  display: inline-block;
+  border-radius: 31px;
+  font-size: 0;
+  width: 403px;
+  height: 50px;
+  bottom: 37px;
+  left: calc(40% + -2px);
+}
+.section-event > .contents-box .swiper-event .slide-7 > button {
+  position: absolute;
+  display: inline-block;
+  border-radius: 31px;
+  font-size: 0;
+  width: 257px;
+  height: 50px;
+  bottom: 131px;
+  left: calc(40% + -25px);
+}
+/* 
+
+
+section-used
+
+
+*/
+.section-used > .used-title {
+  border-bottom: 2px solid var(--main-color-blue);
+  margin-bottom: 72px;
+}
+.section-used > .used-title > div > h1 {
+  padding-bottom: 6px;
+  text-align: center;
+}
+.section-used > div > .swiper-used {
+  padding-top: 0;
+}
+.section-used > div > .swiper-used div[class^="slide_"] {
+  margin-right: 22px;
 }
