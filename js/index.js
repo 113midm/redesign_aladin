@@ -92,6 +92,18 @@ function Topbar_scroll_3() {
   });
 }
 
+function Topbar_scroll_4() {
+  //'탑바-중고매장' 클릭하면 '이벤트' 위치로 이동
+  $(".top-bar .btn-sec-4 > a").click(function () {
+    $("html, body").animate({
+        scrollTop: 3870
+      },
+      500
+    );
+    return false;
+  });
+}
+
 function SectionSlide_init() {
   //'메인 슬라이드'
   const swiper_main_slide = new Swiper(".swiper-main-slide", {
@@ -333,14 +345,45 @@ function SectionEvent_init(){
   });
 }
 
+function SectionUsed_init() {
+  //'중고' 슬라이드
+  const swiper_used = new Swiper(".swiper-used", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
+    },
+
+    on: {
+      slideChange: function () {
+        $('.section-used .title ul > li').removeClass('active');
+        $('.section-used .title ul > li').eq(this.realIndex).addClass('active');
+      }
+    }
+  });
+
+  //'중고' 목록 클릭하는대로 슬라이드 이동
+  $(".section-used .title ul > li:first-child > a").click(function () {
+    swiper_used.slideTo(1, 1000, false);
+  });
+  $(".section-used .title ul > li:nth-child(2) > a").click(function () {
+    swiper_used.slideTo(2, 1000, false);
+  });
+}
+
 Header_init();
 Topbar_init();
 Topbar_scroll_0();
 Topbar_scroll_1();
 Topbar_scroll_2();
 Topbar_scroll_3();
+Topbar_scroll_4();
 SectionSlide_init();
 SectionRecom_init();
 SectionToday_init();
 SectionRecords_init();
 SectionEvent_init();
+SectionUsed_init();

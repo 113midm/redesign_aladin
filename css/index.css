@@ -1257,3 +1257,144 @@ section-used
 .section-used > div > .swiper-used div[class^="slide_"] {
   margin-right: 22px;
 }
+.section-used .resell-box > .inner {
+  padding: 30px 72px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  border-radius: 16px;
+}
+.section-used .resell-box .input-box {
+  width: calc((100% / 2) + 24px);
+}
+.section-used .resell-box .inform-box {
+  width: calc((100% / 2) - 24px);
+}
+.section-used .resell-box .input-box > li:first-child {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.section-used .resell-box .input-box > li > span:first-child {
+  font-size: 15px;
+  width: 112px;
+  display: inline-block;
+  margin-right: 40px;
+}
+.section-used .resell-box .input-box > li > span > label {
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 4px;
+  font-size: 12px;
+  position: relative;
+  top: -3px;
+  left: 0;
+}
+.section-used .resell-box .input-box > li:nth-child(3) {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.section-used .resell-box .input-box > li:nth-child(3) > span > input {
+  width: 295px;
+  border-bottom: 1px solid #333;
+  line-height: 30px;
+}
+.section-used .resell-box .input-box > li:nth-child(3) > span > button {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 8px;
+}
+.section-used .resell-box .input-box > li:nth-child(4) {
+  font-family: "Noto Sans KR";
+  font-weight: bold;
+  font-size: 11px;
+  padding-left: 156px;
+  color: #333;
+}
+.section-used .resell-box .inform-box li {
+  font-size: 12px;
+  font-family: "Noto Sans KR";
+}
+.section-used .resell-box .inform-box > li:first-child {
+  color: var(--main-color-deep-pink);
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+.section-used .resell-box .inform-box ul > li {
+  list-style: disc;
+  line-height: 130%;
+  letter-spacing: -7.5%;
+  width: 517px;
+}
+.section-used .resell-box .inform-box ul > li::marker {
+  font-size: 1px;
+}
+.section-used .resell-box .inform-box li > span {
+  margin-top: 22px;
+  color: var(--main-color-blue);
+  margin-right: 18px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11px;
+}
+.section-used .resell-box .inform-box li > span:hover {
+  text-decoration: underline;
+}
+.section-used .map-title {
+  background-color: var(--main-color-blue);
+  text-align: center;
+  margin-top: 112px;
+  margin-bottom: 72px;
+}
+.section-used .map-title h1 {
+  font-size: 25px;
+  color: #fff;
+  padding: 24px 0;
+}
+.section-used .map-contents > div {
+  padding: 0 72px;
+}
+.section-used .map-contents > div > .map-box {
+  width: 400px;
+  margin-right: 85px;
+}
+.section-used .map-contents .list-box > ul {
+  width: 566px;
+  vertical-align: middle;
+}
+.section-used .map-contents .list-box > ul > .title-box {
+  border-bottom: 1px solid var(--main-color-blue);
+  clear: both;
+  width: 566px;
+}
+.section-used .map-contents .list-box > ul > .title-box > .title{
+  background-color: var(--main-color-blue);
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  padding: 6px 16px;
+  margin-right: 8px;
+}
+.section-used .map-contents .list-box > ul > .title-box > span:not([class="title"]) {
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Noto Sans KR";
+  color: var(--main-color-blue);
+}
+.section-used .map-contents .list-box > ul > li {
+  text-align: center;
+  width: calc(100% / 6);
+  height: 38px;
+  margin: 12px 0;
+  line-height: 38px;
+  cursor: pointer;
+}
+.section-used .map-contents .list-box > ul > li:nth-of-type(6n + 1) {
+  clear: both;
+}
+.section-used .map-contents .list-box > ul > .lh-130 {
+  line-height: 130%;
+}
