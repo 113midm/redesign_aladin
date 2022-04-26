@@ -372,6 +372,118 @@ function SectionUsed_init() {
   $(".section-used .title ul > li:nth-child(2) > a").click(function () {
     swiper_used.slideTo(2, 1000, false);
   });
+
+  //지도에서 클릭하는대로 목록 진하게 표시
+  //seoul
+  $(".map-contents .map-box .point-box > .seoul").click(function(){
+    if ($(".map-contents .list-box > .list-box-1 > li").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-1 > li").addClass("active");
+    }
+  });
+  //gyeonggi
+  $(".map-contents .map-box .point-box > .gyeonggi").click(function(){
+    if ($(".map-contents .list-box > .list-box-2 > li").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-2 > li").addClass("active");
+    }
+  });
+  //incheon
+  $(".map-contents .map-box .point-box > .incheon").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .incheon").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-3 > .incheon").addClass("active");
+    }
+  });
+  //daejeon
+  $(".map-contents .map-box .point-box > .daejeon").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .daejeon").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-3 > .daejeon").addClass("active");
+    }
+  });
+  //jeonbuk
+  $(".map-contents .map-box .point-box > .jeonbuk").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .jeonbuk").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-3 > .jeonbuk").addClass("active");
+    }
+  });
+  //daegu
+  $(".map-contents .map-box .point-box > .daegu").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .daegu").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-3 > .daegu").addClass("active");
+    }
+  });
+  //ulsan
+  $(".map-contents .map-box .point-box > .ulsan").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .ulsan").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-3 > .ulsan").addClass("active");
+    }
+  });
+  //gwangju
+  $(".map-contents .map-box .point-box > .gwangju").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .gwangju").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-3 > .gwangju").addClass("active");
+    }
+  });
+  //gyeongnam
+  $(".map-contents .map-box .point-box > .gyeongnam").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .gyeongnam").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-3 > .gyeongnam").addClass("active");
+    }
+  });
+  //busan
+  $(".map-contents .map-box .point-box > .busan").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .busan").hasClass("active")) {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+    } else {
+      $(".map-contents .list-box > ul > li").removeClass("active");
+      $(".map-contents .list-box > .list-box-3 > .busan").addClass("active");
+    }
+  });
+}
+
+function FooterNotice_init() {
+  //'추천 마법사' 슬라이드
+  const swiper_notice = new Swiper(".swiper-notice", {
+    loop: true,
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 0,
+
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
+    },
+
+    navigation: {
+      nextEl: ".swiper-notice .swiper-button-next",
+      prevEl: ".swiper-notice .swiper-button-prev"
+    },
+  });
 }
 
 Header_init();
@@ -387,3 +499,4 @@ SectionToday_init();
 SectionRecords_init();
 SectionEvent_init();
 SectionUsed_init();
+FooterNotice_init();
