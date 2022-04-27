@@ -81,7 +81,7 @@ header_logo
   border-bottom: 1px solid var(--gray);
 }
 .header_logo > div {
-  padding-top: 10px;
+  padding-top: 24px;
   text-align: center;
 }
 .header_logo > div > a {
@@ -1741,7 +1741,7 @@ btn-to-top
   line-height: 40px;
   position: fixed;
   right: 352px;
-  bottom: 30px;
+  bottom: 100px;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;

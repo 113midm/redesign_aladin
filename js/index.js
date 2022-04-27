@@ -60,7 +60,7 @@ function Topbar_scroll_1() {
   //'탑바-알라딘 추천 도서' 클릭하면 '추천도서' 위치로 이동
   $(".top-bar .btn-sec-1 > a").click(function () {
     $("html, body").animate({
-        scrollTop: 240
+        scrollTop: 199
       },
       500
     );
@@ -84,7 +84,7 @@ function Topbar_scroll_3() {
   //'탑바-이 달의 이벤트' 클릭하면 '이벤트' 위치로 이동
   $(".top-bar .btn-sec-3 > a").click(function () {
     $("html, body").animate({
-        scrollTop: 2822
+        scrollTop: 2833
       },
       500
     );
@@ -96,7 +96,7 @@ function Topbar_scroll_4() {
   //'탑바-중고매장' 클릭하면 '이벤트' 위치로 이동
   $(".top-bar .btn-sec-4 > a").click(function () {
     $("html, body").animate({
-        scrollTop: 3911
+        scrollTop: 3766
       },
       500
     );
