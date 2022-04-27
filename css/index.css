@@ -84,6 +84,14 @@ header_logo
   padding-top: 10px;
   text-align: center;
 }
+.header_logo > div > a {
+  display: inline-block;
+  width: 192px;
+  height: 70px;
+}
+.header_logo > div > a > img {
+  width: 90%;
+}
 /* 
 
 
@@ -430,19 +438,19 @@ section-slide
 }
 .section-slide .swiper-main-slide {
   width: 100%;
-  height: 666px;
+  height: 650px;
 }
 .section-slide .swiper-slide {
   background-color: #fff;
 }
 .section-slide .swiper-slide > .inner {
   padding-left: 160px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 72px;
+  padding-bottom: 72px;
   position: relative;
 }
 .section-slide .swiper-slide > div > .img-box {
-  transform: translatex(-5%);
+  transform: translatex(-10%);
   opacity: 0;
   transition: all 0.5s ease;
 }
@@ -460,7 +468,7 @@ section-slide
   height: 506px;
   margin-left: 100px;
   position: relative;
-  transform: translatex(5%);
+  transform: translatex(10%);
   opacity: 0;
   transition: all 0.5s ease;
 }
@@ -473,7 +481,7 @@ section-slide
 .section-records > div > .swiper-records .tag-box .book-category > span,
 .section-used > div > .swiper-used .tag-box .book-category > span {
   font-family: "Noto Sans KR";
-  font-size: 15px;
+  font-size: 12px;
   background-color: var(--main-color-yellow);
   border-radius: 15px;
   padding: 2px 8px;
@@ -481,12 +489,13 @@ section-slide
 }
 .section-slide .swiper-slide .text-box > ul > .book-title {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 25px;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 .section-slide .swiper-slide .text-box > ul > .book-writer {
-  font-size: 20px;
+  font-size: 15px;
 }
 .section-slide .swiper-slide .text-box > ul > .underline {
   background-color: #111;
@@ -496,7 +505,7 @@ section-slide
   margin-bottom: 40px;
 }
 .section-slide .swiper-slide .text-box > ul > .book-des {
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Noto Sans KR";
   line-height: 150%;
   margin-bottom: 148px;
@@ -514,8 +523,8 @@ section-slide
   background-color: var(--main-color-blue);
   color: #fff;
   padding: 4px 8px;
-  font-size: 15px;
-  margin-bottom: 16px;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 .section-slide .swiper-slide .text-box > ul > .book-event > span:last-child {
   white-space: nowrap;
@@ -525,7 +534,11 @@ section-slide
   display: inline-block;
   font-family: "Noto Sans KR";
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.section-slide .swiper-slide .text-box > ul > .book-event > span:last-child:hover {
+  text-decoration: underline;
 }
 .section-slide .swiper-slide .text-box > .flag-box {
   position: absolute;
@@ -550,13 +563,14 @@ section-slide > slide-title
   justify-content: space-between;
 }
 .section-slide > div > .slide-title > ul > li {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   text-align: center;
   width: 100%;
   line-height: 40px;
   border: 1px solid var(--main-color-blue);
   border-right: none;
+  cursor: pointer;
 }
 .section-slide > div > .slide-title > ul > li:last-child {
   border-right: 1px solid var(--main-color-blue);
@@ -583,12 +597,12 @@ section-recom
 .section-recom > div > .title > h1 {
   font-weight: bold;
   font-size: 25px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .section-recom > div > .title > p {
   color: var(--main-color-blue);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 32px;
 }
 .section-recom > div > .title > .keywords {
@@ -626,7 +640,7 @@ section-recom
   box-shadow: 2px 2px 4px var(--gray);
   overflow: hidden;
   cursor: pointer;
-  margin-right: 29px;
+  margin-right: 27px;
 }
 .section-recom > div > .swiper-recom div[class^="slide_"]:nth-child(4n),
 .section-used > div > .swiper-used div[class^="slide_"] :nth-child(4n){
@@ -673,9 +687,12 @@ section-recom
 }
 .section-recom > div > .swiper-recom .swiper-slide .text-box > .book-title,
 .section-used > div > .swiper-used .text-box > .book-title {
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
+}
+.section-recom > div > .swiper-recom div[class^="slide_"]:hover .text-box > .book-title,
+.section-used > div > .swiper-used div[class^="slide_"]:hover .text-box > .book-title {
+  text-decoration: underline;
 }
 .section-recom > div > .swiper-recom .swiper-slide .text-box > .book-writer,
 .section-used > div > .swiper-used .text-box > .book-writer {
@@ -926,7 +943,7 @@ section-records
 }
 .section-records > div > .title > h1,
 .section-used > div > .title > h1 {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-size: 25px;
   font-weight: bold;
 }
@@ -1023,11 +1040,11 @@ section-event
 .section-event > .title-box > div > .title > .img-box img {
   margin-top: 8px;
   margin-bottom: 8px;
-  width: 70px;
+  width: 65px;
 }
 .section-event > .title-box > div > .title > h1 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 22px;
   color: #fff;
   margin-bottom: 15px;
 }
@@ -1038,12 +1055,12 @@ section-event
   clear: both;
 }
 .section-event > .title-box > div > .sub-title > ul > li > a {
-  font-size: 18px;
+  font-size: 17px;
   display: inline-block;
   width: 277px;
-  height: calc((102px / 2) - 10px);
+  height: calc((102px / 2) - 16px);
   text-align: center;
-  line-height: calc((102px / 2) - 10px);
+  line-height: calc((102px / 2) - 16px);
   margin-bottom: 10px;
 }
 .section-event > .title-box > div > .sub-title > ul > li.active > a {
@@ -1238,7 +1255,7 @@ section-used
 
 */
 .section-used {
-  margin-bottom: 121px;
+  margin-bottom: 80px;
 }
 .section-used > .used-title {
   border-bottom: 2px solid var(--main-color-blue);
@@ -1256,7 +1273,7 @@ section-used
 }
 .section-used .resell-box > .inner {
   padding: 30px 72px;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
   border-radius: 16px;
 }
 .section-used .resell-box .input-box {
@@ -1346,9 +1363,9 @@ section-used
   margin-bottom: 72px;
 }
 .section-used .map-title h1 {
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 .section-used .map-contents > div {
   padding: 0 72px;
@@ -1499,7 +1516,7 @@ section-used
   background-color: var(--main-color-blue);
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   display: inline-block;
   padding: 6px 16px;
   margin-right: 8px;
@@ -1507,7 +1524,7 @@ section-used
 .section-used .map-contents .list-box > ul > .title-box > span:not([class="title"]) {
   font-weight: bold;
   font-size: 12px;
-  font-family: "Noto Sans KR";
+  /* font-family: "Noto Sans KR"; */
   color: var(--main-color-blue);
 }
 .section-used .map-contents .list-box > ul > li {
@@ -1562,6 +1579,7 @@ notice
 .notice > div > .swiper-notice > div > .swiper-slide > span {
   font-family: "Noto Sans KR";
   font-size: 15px;
+  cursor: pointer;
 }
 .notice > div > .swiper-notice > .swiper-button-box {
   position: absolute;
@@ -1588,13 +1606,13 @@ corp
 
 */
 .corp > div {
-  padding-top: 32px;
-  padding-bottom: 80px;
+  padding-top: 24px;
+  padding-bottom: 48px;
 }
 .corp > div > .footer-menu {
   padding-right: 21px;
   padding-left: 55px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .corp > div > .footer-menu > div {
   display: flex;
@@ -1633,4 +1651,33 @@ corp
 .corp > div > .biz li > span.text-deco:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+/* 
+
+
+footer
+btn-to-top
+
+
+*/
+.btn-to-top > button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--main-color-blue);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  line-height: 40px;
+  position: fixed;
+  right: 352px;
+  bottom: 30px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.btn-to-top.active > button {
+  opacity: 1;
+  visibility: visible;
 }

@@ -24,7 +24,7 @@ function Topbar_init() {
 
     console.log(scroll_top);
 
-    if (scroll_top > 240) {
+    if (scroll_top > 194) {
       $(".top-bar").addClass("active");
     } else {
       $(".top-bar").removeClass("active");
@@ -60,7 +60,7 @@ function Topbar_scroll_1() {
   //'탑바-알라딘 추천 도서' 클릭하면 '추천도서' 위치로 이동
   $(".top-bar .btn-sec-1 > a").click(function () {
     $("html, body").animate({
-        scrollTop: 200
+        scrollTop: 240
       },
       500
     );
@@ -72,7 +72,7 @@ function Topbar_scroll_2() {
   //'탑바-알라딘 추천 음반' 클릭하면 '추천음반' 위치로 이동
   $(".top-bar .btn-sec-2 > a").click(function () {
     $("html, body").animate({
-        scrollTop: 2200
+        scrollTop: 2110
       },
       500
     );
@@ -84,7 +84,7 @@ function Topbar_scroll_3() {
   //'탑바-이 달의 이벤트' 클릭하면 '이벤트' 위치로 이동
   $(".top-bar .btn-sec-3 > a").click(function () {
     $("html, body").animate({
-        scrollTop: 2870
+        scrollTop: 2822
       },
       500
     );
@@ -96,7 +96,7 @@ function Topbar_scroll_4() {
   //'탑바-중고매장' 클릭하면 '이벤트' 위치로 이동
   $(".top-bar .btn-sec-4 > a").click(function () {
     $("html, body").animate({
-        scrollTop: 3870
+        scrollTop: 3911
       },
       500
     );
@@ -486,6 +486,28 @@ function FooterNotice_init() {
   });
 }
 
+function BtnToTop_init(){
+
+  $(window).scroll(function () {
+    let scroll_top = $(this).scrollTop();
+
+    if (scroll_top > 240) {
+      $(".btn-to-top").addClass("active");
+    } else {
+      $(".btn-to-top").removeClass("active");
+    }
+  });
+
+  $(".btn-to-top").click(function(){
+    $("html, body").animate({
+      scrollTop: 0
+    },
+    500
+  );
+  return false;
+  });
+}
+
 Header_init();
 Topbar_init();
 Topbar_scroll_0();
@@ -500,3 +522,4 @@ SectionRecords_init();
 SectionEvent_init();
 SectionUsed_init();
 FooterNotice_init();
+BtnToTop_init();
