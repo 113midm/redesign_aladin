@@ -84,7 +84,7 @@ function Topbar_scroll_3() {
   //'탑바-이 달의 이벤트' 클릭하면 '이벤트' 위치로 이동
   $(".top-bar .btn-sec-3 > a").click(function () {
     $("html, body").animate({
-        scrollTop: 2833
+        scrollTop: 2832
       },
       500
     );
