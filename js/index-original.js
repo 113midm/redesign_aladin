@@ -8,15 +8,12 @@ function Header_init() {
   $(".btn-category").click(function () {
     if ($(".popup-category").hasClass("active")) {
       $(".popup-category").removeClass("active");
-      $("html").removeClass("active");
     } else {
       $(".popup-category").addClass("active");
-      $("html").addClass("active");
     }
   });
   $(".popup-category .btn-close").click(function () {
     $(".popup-category").removeClass("active");
-    $("html").removeClass("active");
   });
 }
 
@@ -106,23 +103,6 @@ function Topbar_scroll_4() {
     return false;
   });
 }
-Header_init();
-Topbar_init();
-Topbar_scroll_0();
-Topbar_scroll_1();
-Topbar_scroll_2();
-Topbar_scroll_3();
-Topbar_scroll_4();
-
-$(".header_mobile-bar").click(function () {
-  if ($(".header_mobile-menu").hasClass("active")) {
-    $(".header_mobile-menu").removeClass("active");
-    $("html").removeClass("active");
-  } else {
-    $(".header_mobile-menu").addClass("active");
-    $("html").addClass("active");
-  }
-});
 
 function SectionSlide_init() {
   //'메인 슬라이드'
@@ -139,8 +119,8 @@ function SectionSlide_init() {
 
     on: {
       slideChange: function () {
-        $(".slide-title > ul > li").removeClass("active");
-        $(".slide-title > ul > li").eq(this.realIndex).addClass("active");
+        $('.slide-title > ul > li').removeClass('active');
+        $('.slide-title > ul > li').eq(this.realIndex).addClass('active');
       }
     }
   });
@@ -159,136 +139,131 @@ function SectionSlide_init() {
     swiper_main_slide.slideTo(4, 1000, false);
   });
 }
-SectionSlide_init();
 
 function SectionRecom_init() {
   //'추천 마법사' 슬라이드
   const swiper_recom = new Swiper(".swiper-recom", {
     loop: false,
-
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true
-    },
-
-    slidesPerView: 4, //640~1024 해상도 외 레이아웃 뷰 개수
-    spaceBetween: 20, //위 slidesPerview 여백
-
-    slidesPerGroup: 4,
+    slidesPerView: 1,
+    spaceBetween: 0,
 
     navigation: {
       nextEl: ".swiper-recom .swiper-button-next",
       prevEl: ".swiper-recom .swiper-button-prev"
     },
-
-    breakpoints: {
-      //반응형 조건 속성
-      300: {
-        slidesPerView: 1,
-        slidesPerGroup: 1
-      },
-      520: {
-        slidesPerView: 2,
-        slidesPerGroup: 2
-      },
-      768: {
-        slidesPerView: 3,
-        slidesPerGroup: 3
-      },
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4
-      }
-    }
   });
 }
-SectionRecom_init();
 
 function SectionToday_init() {
+  //'오늘의 한 문장' 책 이미지에 마우스 올리면 설명 글 나옴
+  $(".section-today > div > .inner .book-img-box > .book-left").mouseenter(function () {
+    $(".section-today > div > .inner .book-text-box > .book-left").addClass("active");
+  });
+  $(".section-today > div > .inner .book-img-box > .book-left").mouseleave(function () {
+    $(".section-today > div > .inner .book-text-box > .book-left").removeClass("active");
+  });
+  $(".section-today > div > .inner .book-img-box > .book-right").mouseenter(function () {
+    $(".section-today > div > .inner .book-text-box > .book-right").addClass("active");
+  });
+  $(".section-today > div > .inner .book-img-box > .book-right").mouseleave(function () {
+    $(".section-today > div > .inner .book-text-box > .book-right").removeClass("active");
+  });
+
   //'오늘의 한 문장' 책 클릭하면 해당 내용으로 변함
-  $(
-    ".section-today > div > .inner > .book-box > .book-img-box > .book-right"
-  ).click(function () {
-    //오른쪽과 센터가 바뀐 상태
-    if (
-      $(".section-today > div > .inner > .book-main > .book-right").hasClass(
-        "active"
-      )
-    ) {
-      $(".section-today > div > .inner > .book-main > .text-box").removeClass(
-        "active"
-      );
-      $(".section-today > div > .inner > .book-main > .book-center").addClass(
-        "active"
-      );
+  $(".section-today > div > .inner .book-img-box > .book-left").click(function () {
+    //왼쪽과 센터가 바뀐 상태
+    if ($(".section-today > div > .inner .book-main > .book-left").hasClass("active")) {
+      $(".section-today > div > .inner .book-main > .text-box").removeClass("active");
+      $(".section-today > div > .inner .book-main > .book-center").addClass("active");
 
       //이미지 바꾸기(원상복구)
       var centerImg = document.getElementById("book-img-center");
-      centerImg.setAttribute(
-        "src",
-        "https://image.aladin.co.kr/product/29246/9/cover500/8932922055_1.jpg"
-      );
-      var rightImg = document.getElementById("book-img-right");
-      rightImg.setAttribute(
-        "src",
-        "https://image.aladin.co.kr/product/29231/77/cover500/k252837196_1.jpg"
-      );
+      centerImg.setAttribute("src", "https://image.aladin.co.kr/product/29246/9/cover500/8932922055_1.jpg")
+      var leftImg = document.getElementById("book-img-left");
+      leftImg.setAttribute("src", "https://image.aladin.co.kr/product/29250/62/cover500/k982837392_1.jpg");
 
       //이미지 텍스트 바꾸기(원상복구)
-      $(
-        ".section-today > div > .inner > .book-box > .book-img-box > .book-right .book-title"
-      ).html("더러운 손을 거기에 닦지 마");
-      $(
-        ".section-today > div > .inner > .book-box > .book-img-box > .book-right .book-writer"
-      ).html("아시자와 요 지음");
+      $(".section-today > div > .inner .book-text-box > .book-left .book-title").html("그래서... 이런 말이 생겼습니다");
+      $(".section-today > div > .inner .book-text-box > .book-left .book-writer").html("금정연 지음");
 
-      //메인 색상 바꾸기(원상복구)
+      //메인 색상 바꾸기(원상 복구)
       $(".section-today > .today-bg").css("background-color", "#018B7B");
-      $(".section-today > div > .inner > .book-main > .text-box > *").css(
-        "color",
-        "#fff"
-      );
+      $(".section-today > div > .inner .book-main > .text-box > *").css("color", "#fff");
     }
     //초기 상태
     else {
-      $(".section-today > div > .inner > .book-main > .text-box").removeClass(
-        "active"
-      );
-      $(".section-today > div > .inner > .book-main > .book-right").addClass(
-        "active"
-      );
+      $(".section-today > div > .inner .book-main > .text-box").removeClass("active");
+      $(".section-today > div > .inner .book-main > .book-left").addClass("active");
 
       //이미지 바꾸기
       var centerImg = document.getElementById("book-img-center");
-      centerImg.setAttribute(
-        "src",
-        "https://image.aladin.co.kr/product/29231/77/cover500/k252837196_1.jpg"
-      );
+      centerImg.setAttribute("src", "https://image.aladin.co.kr/product/29250/62/cover500/k982837392_1.jpg")
+      var leftImg = document.getElementById("book-img-left");
+      leftImg.setAttribute("src", "https://image.aladin.co.kr/product/29246/9/cover500/8932922055_1.jpg");
       var rightImg = document.getElementById("book-img-right");
-      rightImg.setAttribute(
-        "src",
-        "https://image.aladin.co.kr/product/29246/9/cover500/8932922055_1.jpg"
-      );
+      rightImg.setAttribute("src", "https://image.aladin.co.kr/product/29231/77/cover500/k252837196_1.jpg");
 
       //이미지 텍스트 바꾸기
-      $(
-        ".section-today > div > .inner > .book-box > .book-img-box > .book-right .book-title"
-      ).html("미래가 우리 손을 떠나기 전에");
-      $(
-        ".section-today > div > .inner > .book-box > .book-img-box > .book-right .book-writer"
-      ).html("나오미 클라인,리베카 스테포프 지음");
+      $(".section-today > div > .inner .book-text-box > .book-left .book-title").html("미래가 우리 손을 떠나기 전에");
+      $(".section-today > div > .inner .book-text-box > .book-left .book-writer").html("나오미 클라인,리베카 스테포프 지음");
+      $(".section-today > div > .inner .book-text-box > .book-right .book-title").html("더러운 손을 거기에 닦지 마");
+      $(".section-today > div > .inner .book-text-box > .book-right .book-writer").html("아시자와 요 지음");
+
+      //메인 색상 바꾸기
+      $(".section-today > .today-bg").css("background-color", "#A4D5F5");
+      $(".section-today > div > .inner .book-main > .text-box > *").css("color", "#333");
+    }
+
+  });
+
+  $(".section-today > div > .inner .book-img-box > .book-right").click(function () {
+    //오른쪽과 센터가 바뀐 상태
+    if ($(".section-today > div > .inner .book-main > .book-right").hasClass("active")) {
+      $(".section-today > div > .inner .book-main > .text-box").removeClass("active");
+      $(".section-today > div > .inner .book-main > .book-center").addClass("active");
+
+      //이미지 바꾸기(원상복구)
+      var centerImg = document.getElementById("book-img-center");
+      centerImg.setAttribute("src", "https://image.aladin.co.kr/product/29246/9/cover500/8932922055_1.jpg")
+      var rightImg = document.getElementById("book-img-right");
+      rightImg.setAttribute("src", "https://image.aladin.co.kr/product/29231/77/cover500/k252837196_1.jpg");
+
+      //이미지 텍스트 바꾸기(원상복구)
+      $(".section-today > div > .inner .book-text-box > .book-right .book-title").html("더러운 손을 거기에 닦지 마");
+      $(".section-today > div > .inner .book-text-box > .book-right .book-writer").html("아시자와 요 지음");
+
+      //메인 색상 바꾸기(원상복구)
+      $(".section-today > .today-bg").css("background-color", "#018B7B");
+      $(".section-today > div > .inner .book-main > .text-box > *").css("color", "#fff");
+    }
+    //초기 상태
+    else {
+      $(".section-today > div > .inner .book-main > .text-box").removeClass("active");
+      $(".section-today > div > .inner .book-main > .book-right").addClass("active");
+
+      //이미지 바꾸기
+      var centerImg = document.getElementById("book-img-center");
+      centerImg.setAttribute("src", "https://image.aladin.co.kr/product/29231/77/cover500/k252837196_1.jpg")
+      var rightImg = document.getElementById("book-img-right");
+      rightImg.setAttribute("src", "https://image.aladin.co.kr/product/29246/9/cover500/8932922055_1.jpg");
+      var leftImg = document.getElementById("book-img-left");
+      leftImg.setAttribute("src", "https://image.aladin.co.kr/product/29250/62/cover500/k982837392_1.jpg");
+
+
+      //이미지 텍스트 바꾸기
+      $(".section-today > div > .inner .book-text-box > .book-right .book-title").html("미래가 우리 손을 떠나기 전에");
+      $(".section-today > div > .inner .book-text-box > .book-right .book-writer").html("나오미 클라인,리베카 스테포프 지음");
+      $(".section-today > div > .inner .book-text-box > .book-left .book-title").html("그래서... 이런 말이 생겼습니다");
+      $(".section-today > div > .inner .book-text-box > .book-left .book-writer").html("금정연 지음");
+
 
       //메인 색상 바꾸기
       // $(".section-today > .today-bg").css("background-color", "#75B8BE");
       $(".section-today > .today-bg").css("background-color", "#B9AFA5");
-      $(".section-today > div > .inner > .book-main > .text-box > *").css(
-        "color",
-        "#333"
-      );
+      $(".section-today > div > .inner .book-main > .text-box > *").css("color", "#333");
     }
   });
 }
-SectionToday_init();
 
 function SectionRecords_init() {
   //'추천 음반' 슬라이드
@@ -304,10 +279,8 @@ function SectionRecords_init() {
 
     on: {
       slideChange: function () {
-        $(".section-records .title ul > li").removeClass("active");
-        $(".section-records .title ul > li")
-          .eq(this.realIndex)
-          .addClass("active");
+        $('.section-records .title ul > li').removeClass('active');
+        $('.section-records .title ul > li').eq(this.realIndex).addClass('active');
       }
     }
   });
@@ -323,9 +296,8 @@ function SectionRecords_init() {
     swiper_records.slideTo(3, 1000, false);
   });
 }
-SectionRecords_init();
 
-function SectionEvent_init() {
+function SectionEvent_init(){
   //'이벤트 슬라이드'
   const swiper_event = new Swiper(".swiper-event", {
     loop: true,
@@ -340,10 +312,8 @@ function SectionEvent_init() {
 
     on: {
       slideChange: function () {
-        $(".section-event .sub-title > ul > li").removeClass("active");
-        $(".section-event .sub-title > ul > li")
-          .eq(this.realIndex)
-          .addClass("active");
+        $('.section-event .sub-title > ul > li').removeClass('active');
+        $('.section-event .sub-title > ul > li').eq(this.realIndex).addClass('active');
       }
     }
   });
@@ -374,7 +344,6 @@ function SectionEvent_init() {
     swiper_event.slideTo(8, 1000, false);
   });
 }
-SectionEvent_init();
 
 function SectionUsed_init() {
   //'중고' 슬라이드
@@ -383,15 +352,15 @@ function SectionUsed_init() {
     slidesPerView: 1,
     spaceBetween: 10,
 
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: true
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
+    },
 
     on: {
       slideChange: function () {
-        $(".section-used .title ul > li").removeClass("active");
-        $(".section-used .title ul > li").eq(this.realIndex).addClass("active");
+        $('.section-used .title ul > li').removeClass('active');
+        $('.section-used .title ul > li').eq(this.realIndex).addClass('active');
       }
     }
   });
@@ -406,7 +375,7 @@ function SectionUsed_init() {
 
   //지도에서 클릭하는대로 목록 진하게 표시
   //seoul
-  $(".map-contents .map-box .point-box > .seoul").click(function () {
+  $(".map-contents .map-box .point-box > .seoul").click(function(){
     if ($(".map-contents .list-box > .list-box-1 > li").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
@@ -415,7 +384,7 @@ function SectionUsed_init() {
     }
   });
   //gyeonggi
-  $(".map-contents .map-box .point-box > .gyeonggi").click(function () {
+  $(".map-contents .map-box .point-box > .gyeonggi").click(function(){
     if ($(".map-contents .list-box > .list-box-2 > li").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
@@ -424,10 +393,8 @@ function SectionUsed_init() {
     }
   });
   //incheon
-  $(".map-contents .map-box .point-box > .incheon").click(function () {
-    if (
-      $(".map-contents .list-box > .list-box-3 > .incheon").hasClass("active")
-    ) {
+  $(".map-contents .map-box .point-box > .incheon").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .incheon").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
       $(".map-contents .list-box > ul > li").removeClass("active");
@@ -435,10 +402,8 @@ function SectionUsed_init() {
     }
   });
   //daejeon
-  $(".map-contents .map-box .point-box > .daejeon").click(function () {
-    if (
-      $(".map-contents .list-box > .list-box-3 > .daejeon").hasClass("active")
-    ) {
+  $(".map-contents .map-box .point-box > .daejeon").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .daejeon").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
       $(".map-contents .list-box > ul > li").removeClass("active");
@@ -446,10 +411,8 @@ function SectionUsed_init() {
     }
   });
   //jeonbuk
-  $(".map-contents .map-box .point-box > .jeonbuk").click(function () {
-    if (
-      $(".map-contents .list-box > .list-box-3 > .jeonbuk").hasClass("active")
-    ) {
+  $(".map-contents .map-box .point-box > .jeonbuk").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .jeonbuk").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
       $(".map-contents .list-box > ul > li").removeClass("active");
@@ -457,10 +420,8 @@ function SectionUsed_init() {
     }
   });
   //daegu
-  $(".map-contents .map-box .point-box > .daegu").click(function () {
-    if (
-      $(".map-contents .list-box > .list-box-3 > .daegu").hasClass("active")
-    ) {
+  $(".map-contents .map-box .point-box > .daegu").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .daegu").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
       $(".map-contents .list-box > ul > li").removeClass("active");
@@ -468,10 +429,8 @@ function SectionUsed_init() {
     }
   });
   //ulsan
-  $(".map-contents .map-box .point-box > .ulsan").click(function () {
-    if (
-      $(".map-contents .list-box > .list-box-3 > .ulsan").hasClass("active")
-    ) {
+  $(".map-contents .map-box .point-box > .ulsan").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .ulsan").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
       $(".map-contents .list-box > ul > li").removeClass("active");
@@ -479,10 +438,8 @@ function SectionUsed_init() {
     }
   });
   //gwangju
-  $(".map-contents .map-box .point-box > .gwangju").click(function () {
-    if (
-      $(".map-contents .list-box > .list-box-3 > .gwangju").hasClass("active")
-    ) {
+  $(".map-contents .map-box .point-box > .gwangju").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .gwangju").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
       $(".map-contents .list-box > ul > li").removeClass("active");
@@ -490,23 +447,17 @@ function SectionUsed_init() {
     }
   });
   //gyeongnam
-  $(".map-contents .map-box .point-box > .gyeongnam").click(function () {
-    if (
-      $(".map-contents .list-box > .list-box-3 > .gyeongnam").hasClass("active")
-    ) {
+  $(".map-contents .map-box .point-box > .gyeongnam").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .gyeongnam").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
       $(".map-contents .list-box > ul > li").removeClass("active");
-      $(".map-contents .list-box > .list-box-3 > .gyeongnam").addClass(
-        "active"
-      );
+      $(".map-contents .list-box > .list-box-3 > .gyeongnam").addClass("active");
     }
   });
   //busan
-  $(".map-contents .map-box .point-box > .busan").click(function () {
-    if (
-      $(".map-contents .list-box > .list-box-3 > .busan").hasClass("active")
-    ) {
+  $(".map-contents .map-box .point-box > .busan").click(function(){
+    if ($(".map-contents .list-box > .list-box-3 > .busan").hasClass("active")) {
       $(".map-contents .list-box > ul > li").removeClass("active");
     } else {
       $(".map-contents .list-box > ul > li").removeClass("active");
@@ -514,7 +465,6 @@ function SectionUsed_init() {
     }
   });
 }
-SectionUsed_init();
 
 function FooterNotice_init() {
   //'추천 마법사' 슬라이드
@@ -532,11 +482,12 @@ function FooterNotice_init() {
     navigation: {
       nextEl: ".swiper-notice .swiper-button-next",
       prevEl: ".swiper-notice .swiper-button-prev"
-    }
+    },
   });
 }
 
-function BtnToTop_init() {
+function BtnToTop_init(){
+
   $(window).scroll(function () {
     let scroll_top = $(this).scrollTop();
 
@@ -547,14 +498,28 @@ function BtnToTop_init() {
     }
   });
 
-  $(".btn-to-top").click(function () {
+  $(".btn-to-top").click(function(){
     $("html, body").animate({
-        scrollTop: 0
-      },
-      500
-    );
-    return false;
+      scrollTop: 0
+    },
+    500
+  );
+  return false;
   });
 }
+
+Header_init();
+Topbar_init();
+Topbar_scroll_0();
+Topbar_scroll_1();
+Topbar_scroll_2();
+Topbar_scroll_3();
+Topbar_scroll_4();
+SectionSlide_init();
+SectionRecom_init();
+SectionToday_init();
+SectionRecords_init();
+SectionEvent_init();
+SectionUsed_init();
 FooterNotice_init();
 BtnToTop_init();

@@ -1,1624 +1,1665 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aladin</title>
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- font -->
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <!-- swiper-slide -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- 내 파일 -->
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aladin responsive</title>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- font -->
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- swiper-slide -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- 파일 연결 -->
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js" defer></script>
 </head>
 
 <body>
-    <div id="wrap">
-        <div class="header">
-            <div class="header_logo">
-                <div class="container">
-                    <a href="https://www.aladin.co.kr/home/welcome.aspx">
-                        <img src="https://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif" alt="header_logo_img">
-                    </a>
-                </div>
-            </div>
-            <div class="header_search">
-                <div class="container">
-                    <div class="inner">
-                        <input type="text" placeholder="검색어를 입력하세요" onfocus="this.placeholder = ''"
-                            onblur="this.placeholder='검색어를 입력하세요'">
-                        <button></button>
-                    </div>
-                    <div class="header_side-menu">
-                        <ul class="float-grid">
-                            <li class="btn-my">
-                                <button></button>
-                                <ul class="sub-menu float-grid">
-                                    <li><a href="#">로그인</a></li>
-                                    <li><a href="#">회원가입</a></li>
-                                    <li><a href="#">마이페이지</a></li>
-                                </ul>
-                            </li>
-                            <li class="btn-cart"><button></button></li>
-                            <li class="btn-customer">
-                                <button></button>
-                                <ul class="sub-menu">
-                                    <li>1544-2514</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="header-ad">
-                        <a href="#" class="img-box">
-                            <img src="https://image.aladin.co.kr/img/bn/ebook/2022/02/left_220411_MD.jpg"
-                                alt="header-ad-img">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="header_menu">
-                <div class="container">
-                    <div class="inner">
-                        <ul>
-                            <div>
-                                <li class="btn-category"><span>전체 카테고리 보기</span></li>
-                                <li><a href="#">중고매장 찾기</a></li>
-                                <li><a href="#">알라딘 굿즈</a></li>
-                                <li><a href="#">기프티북</a></li>
-                                <!-- <li class="hashtag"><a href="#">#해리포터</a></li> -->
-                                <li class="hashtag"><a href="#">#김영하</a></li>
-                                <li class="hashtag"><a href="#">#롤랑의 노래</a></li>
-                                <li class="hashtag"><a href="#">#에세이</a></li>
-                                <li class="hashtag"><a href="#">#이자람</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-                <div class="popup-category">
-                    <div class="container">
-                        <ul>
-                            <li>
-                                <div class="title">국내도서</div>
-                                <div class="text float-grid">
-                                    <ul>
-                                        <li><a href="#">유아</a></li>
-                                        <li><a href="#">어린이</a></li>
-                                        <li><a href="#">전집/중고전집</a></li>
-                                        <li><a href="#">청소년</a></li>
-                                        <li><a href="#">좋은부모</a></li>
-                                        <li><a href="#">초등학교참고서</a></li>
-                                        <li><a href="#">중학교참고서</a></li>
-                                        <li><a href="#">고등학교참고서</a></li>
-                                        <li><a href="#">여행</a></li>
-                                        <li><a href="#">가정/요리/뷰티</a></li>
-                                        <li><a href="#">건강/취미/레저</a></li>
-                                        <li><a href="#">달력/기타</a></li>
-                                        <li><a href="#">잡지</a></li>
-                                        <li><a href="#">만화</a></li>
-                                        <li><a href="#">고전</a></li>
-                                        <li><a href="#">소설/시/희곡</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><a href="#">장르소설</a></li>
-                                        <li><a href="#">에세이</a></li>
-                                        <li><a href="#">인문학</a></li>
-                                        <li><a href="#">사회과학</a></li>
-                                        <li><a href="#">역사</a></li>
-                                        <li><a href="#">과학</a></li>
-                                        <li><a href="#">예술/대중문화</a></li>
-                                        <li><a href="#">종교/역학</a></li>
-                                        <li><a href="#">경제경영</a></li>
-                                        <li><a href="#">자기계발</a></li>
-                                        <li><a href="#">외국어</a></li>
-                                        <li><a href="#">컴퓨터/모바일</a></li>
-                                        <li><a href="#">대학교재</a></li>
-                                        <li><a href="#">수험서/자격증</a></li>
-                                        <li><a href="#">공무원 수험서</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">외국도서</div>
-                                <div class="text float-grid">
-                                    <ul>
-                                        <li><a href="#">영미도서</a></li>
-                                        <li><a href="#">소설/시/희곡</a></li>
-                                        <li><a href="#">ELT/어학/사전</a></li>
-                                        <li><a href="#">인문/사회</a></li>
-                                        <li><a href="#">경제경영</a></li>
-                                        <li><a href="#">자기계발</a></li>
-                                        <li><a href="#">자연과학</a></li>
-                                        <li><a href="#">컴퓨터</a></li>
-                                        <li><a href="#">예술/대중문화</a></li>
-                                        <li><a href="#">가정/원예/인테리어</a></li>
-                                        <li><a href="#">공예/취미/수집</a></li>
-                                        <li><a href="#">여행</a></li>
-                                        <li><a href="#">건강/스포츠</a></li>
-                                        <li><a href="#">청소년</a></li>
-                                        <li><a href="#">해외잡지</a></li>
-                                        <li><a href="#">일본도서</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><a href="#">잡지</a></li>
-                                        <li><a href="#">코믹</a></li>
-                                        <li><a href="#">문학</a></li>
-                                        <li><a href="#">실용/취미/생활</a></li>
-                                        <li><a href="#">애니메이션 굿즈</a></li>
-                                        <li><a href="#">중국도서</a></li>
-                                        <li><a href="#">소설</a></li>
-                                        <li><a href="#">중국어 교재</a></li>
-                                        <li><a href="#">어린이</a></li>
-                                        <li><a href="#">캐릭터</a></li>
-                                        <li><a href="#">그림책</a></li>
-                                        <li><a href="#">리더스</a></li>
-                                        <li><a href="#">챕터북</a></li>
-                                        <li><a href="#">동화책</a></li>
-                                        <li><a href="#">오디오북</a></li>
-                                        <li><a href="#">어린이사전</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><a href="#">개념학습</a></li>
-                                        <li><a href="#">코스북</a></li>
-                                        <li><a href="#">영어학습</a></li>
-                                        <li><a href="#">교과학습</a></li>
-                                        <li><a href="#">미국교과서</a></li>
-                                        <li><a href="#">수상작</a></li>
-                                        <li><a href="#">제2외국어/이중언어</a></li>
-                                        <li><a href="#">기타 언어권</a></li>
-                                        <li><a href="#">프랑스 도서</a></li>
-                                        <li><a href="#">독일 도서</a></li>
-                                        <li><a href="#">스페인 도서</a></li>
-                                        <li><a href="#">베트남 도서</a></li>
-                                        <li><a href="#">기타 도서</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">eBook</div>
-                                <div class="text float-grid">
-                                    <ul>
-                                        <li><a href="#">소설/시</a></li>
-                                        <li><a href="#">로맨스</a></li>
-                                        <li><a href="#">라이트노벨</a></li>
-                                        <li><a href="#">판타지/무협</a></li>
-                                        <li><a href="#">만화</a></li>
-                                        <li><a href="#">BL</a></li>
-                                        <li><a href="#">에세이</a></li>
-                                        <li><a href="#">자기계발</a></li>
-                                        <li><a href="#">경제경영</a></li>
-                                        <li><a href="#">사회과학</a></li>
-                                        <li><a href="#">인문학</a></li>
-                                        <li><a href="#">역사</a></li>
-                                        <li><a href="#">청소년</a></li>
-                                        <li><a href="#">예술/대중문화</a></li>
-                                        <li><a href="#">종교/역학</a></li>
-                                        <li><a href="#">어린이</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">eBook 뷰어</div>
-                                <div class="text float-grid">
-                                    <ul>
-                                        <li><a href="#">아이폰 뷰어</a></li>
-                                        <li><a href="#">안드로이드 뷰어</a></li>
-                                        <li><a href="#">PC 뷰어</a></li>
-                                        <li><a href="#">크레마</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">온라인 중고샵</div>
-                                <div class="text float-grid">
-                                    <ul>
-                                        <li><a href="#">중고매장</a></li>
-                                        <li><a href="#">중고 국내도서</a></li>
-                                        <li><a href="#">소설/시/희곡</a></li>
-                                        <li><a href="#">에세이</a></li>
-                                        <li><a href="#">어린이</a></li>
-                                        <li><a href="#">유아</a></li>
-                                        <li><a href="#">중고전집</a></li>
-                                        <li><a href="#">경제경영</a></li>
-                                        <li><a href="#">인문학</a></li>
-                                        <li><a href="#">사회과학</a></li>
-                                        <li><a href="#">중고 음반</a></li>
-                                        <li><a href="#">중고 DVD/블루레이</a></li>
-                                        <li><a href="#">중고 외국도서</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">알라딘 굿즈</div>
-                                <div class="text float-grid">
-                                    <ul>
-                                        <li><a href="#">문구</a></li>
-                                        <li><a href="#">독서용품</a></li>
-                                        <li><a href="#">데스크용품</a></li>
-                                        <li><a href="#">디지털</a></li>
-                                        <li><a href="#">가방·파우치</a></li>
-                                        <li><a href="#">생활용품</a></li>
-                                        <li><a href="#">리빙·키친</a></li>
-                                        <li><a href="#">의류·잡화</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">음반</div>
-                                <div class="text float-grid">
-                                    <ul>
-                                        <li><a href="#">가요</a></li>
-                                        <li><a href="#">클래식</a></li>
-                                        <li><a href="#">팝</a></li>
-                                        <li><a href="#">재즈</a></li>
-                                        <li><a href="#">국악</a></li>
-                                        <li><a href="#">월드뮤직</a></li>
-                                        <li><a href="#">종교/명상/기타</a></li>
-                                        <li><a href="#">J-POP</a></li>
-                                        <li><a href="#">OST</a></li>
-                                        <li><a href="#">LP</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">블루레이/DVD</div>
-                                <div class="text float-grid">
-                                    <ul>
-                                        <li><a href="#">드라마/코미디</a></li>
-                                        <li><a href="#">TV시리즈</a></li>
-                                        <li><a href="#">액션/어드벤처</a></li>
-                                        <li><a href="#">S.F./판타지</a></li>
-                                        <li><a href="#">공포/스릴러</a></li>
-                                        <li><a href="#">애니메이션</a></li>
-                                        <li><a href="#">음악DVD</a></li>
-                                        <li><a href="#">블루레이</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="btn-close"></button>
-                    </div>
-                </div>
-            </div>
+  <div id="wrap">
+    <div class="header">
+      <div class="header_logo">
+        <div class="container">
+          <a href="https://www.aladin.co.kr/home/welcome.aspx">
+            <img src="https://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif" alt="header_logo_img">
+          </a>
         </div>
-        <div class="top-bar">
-            <div class="container">
-                <ul>
-                    <div>
-                        <li class="btn-sec-0"><a href="#">
-                                <img src="https://image.aladin.co.kr/img/common/ev_logo.png" alt="">
-                            </a></li>
-                        <li class="btn-sec-1"><a href="#">알라딘 추천 도서</a></li>
-                        <li class="btn-sec-2"><a href="#">알라딘 추천 음반</a></li>
-                        <li class="btn-sec-3"><a href="#">이 달의 이벤트</a></li>
-                        <li class="btn-sec-4"><a href="#">알라딘 중고매장</a></li>
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">회원가입</a></li>
-                        <li><a href="#">마이페이지</a></li>
-                        <li><a href="#">장바구니</a></li>
-                        <li><a href="#">고객센터</a></li>
-                        <li class="btn-search-topbar"><button></button></li>
-                    </div>
+      </div>
+      <div class="header_search">
+        <div class="container">
+          <div class="inner">
+            <input type="text" placeholder="검색어를 입력하세요" onfocus="this.placeholder = ''"
+              onblur="this.placeholder='검색어를 입력하세요'">
+            <button></button>
+          </div>
+          <div class="header_side-menu">
+            <ul class="float-grid">
+              <li class="btn-my">
+                <button></button>
+                <ul class="sub-menu float-grid">
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">회원가입</a></li>
+                  <li><a href="#">마이페이지</a></li>
                 </ul>
-            </div>
-            <div class="popup-search">
-                <div class="container">
-                    <div class="top">
-                        <input type="text" placeholder="검색어를 입력하세요" onfocus="this.placeholder = ''"
-                            onblur="this.placeholder='검색어를 입력하세요'">
-                        <button></button>
-                    </div>
-                    <div class="bottom">
-                        <ul>
-                            <div>
-                                <li><a href="#">중고매장 찾기</a></li>
-                                <li><a href="#">알라딘 굿즈</a></li>
-                                <li><a href="#">기프티북</a></li>
-                                <li class="hashtag"><a href="#">#김영하</a></li>
-                                <li class="hashtag"><a href="#">#롤랑의 노래</a></li>
-                                <li class="hashtag"><a href="#">#에세이</a></li>
-                                <li class="hashtag"><a href="#">#이자람</a></li>
-                                <li class="hashtag"><a href="#">#배우의 밤</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                    <button class="btn-close"></button>
-                </div>
-            </div>
+              </li>
+              <li class="btn-cart"><button></button></li>
+              <li class="btn-customer">
+                <button></button>
+                <ul class="sub-menu">
+                  <li>1544-2514</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="header-ad">
+            <a href="#" class="img-box">
+              <img src="https://image.aladin.co.kr/img/bn/ebook/2022/02/left_220411_MD.jpg" alt="header-ad-img">
+            </a>
+          </div>
         </div>
-        <div class="section">
-            <div class="section-slide">
-                <div class="container">
-                    <div class="swiper-main-slide">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-1">
-                                <div class="inner inline-grid">
-                                    <div class="img-box">
-                                        <img src="https://image.aladin.co.kr/product/29231/71/cover500/k342837195_1.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <ul>
-                                            <li class="book-category">
-                                                <span>에세이</span>
-                                                <span>예술/대중문화</span>
-                                            </li>
-                                            <li class="book-title">배우의 방</li>
-                                            <li class="book-writer">정시우 / 휴머니스트</li>
-                                            <li class="underline"></li>
-                                            <li class="book-des">배우의 집, 배우의 동네, 배우의 작업실…<br><br>작품 속 역할에서 빠져나와<br>배우의
-                                                민낯을 볼 수 있는 곳<br><br>'배우의 방'으로 초대합니다.</li>
-                                            <li class="book-event">
-                                                <span class="book-event_title">관련 이벤트</span>
-                                                <span>배우 9인의 포토카드 세트(한정 부록, 책과 래핑)</span>
-                                            </li>
-                                        </ul>
-                                        <div class="flag-box">
-                                            <img src="image/flag-best.png" alt="">
-                                            <img src="image/flag-new.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-2">
-                                <div class="inner inline-grid">
-                                    <div class="img-box">
-                                        <img src="https://image.aladin.co.kr/product/29146/69/cover500/8932474648_1.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <ul>
-                                            <li class="book-category">
-                                                <span>그리스로마 신화</span>
-                                            </li>
-                                            <li class="book-title">김헌의 그리스 로마 신화</li>
-                                            <li class="book-writer">김헌 / 을유문화사</li>
-                                            <li class="underline"></li>
-                                            <li class="book-des">서울대 서양 고전 열풍의 주역,<br>김헌 교수의 신화 마스터클래스</li>
-                                            <li class="book-event">
-                                                <span class="book-event_title">관련 이벤트</span>
-                                                <span>4월 특별선물! 피너츠 북스탠드, 블루투스 스피커(이벤트 도서 포함, 국내서.외서 5만원 이상)</span>
-                                            </li>
-                                        </ul>
-                                        <div class="flag-box">
-                                            <img src="image/flag-best.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-3">
-                                <div class="inner inline-grid">
-                                    <div class="img-box">
-                                        <img src="https://image.aladin.co.kr/product/29224/88/cover500/k102837999_1.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <ul>
-                                            <li class="book-category">
-                                                <span>사회사상</span>
-                                                <span>민족주의</span>
-                                            </li>
-                                            <li class="book-title">인종, 국민, 계급</li>
-                                            <li class="book-writer">에티엔 발리바르 / 두번째테제</li>
-                                            <li class="underline"></li>
-                                            <li class="book-des">1988년 프랑스에서 초판이 출간된 이래로<br>여러 나라에서 번역되고 논의되어 온 학제간 연구의
-                                                고전<br><br>전쟁과 혼란, 갈등이 증폭하는 시대<br>세 가지 키워드 ‘인종, 국민 계급’을 분석하고 탈구축하며
-                                                살펴보는<br>앞으로의 세계 모습과 이론의 향방</li>
-                                            <li class="book-event">
-                                                <span class="book-event_title">관련 이벤트</span>
-                                                <span>화제의 책+미니 에코백(이벤트 도서 포함, 국내서 4만원 이상)</span>
-                                            </li>
-                                        </ul>
-                                        <div class="flag-box">
-                                            <img src="image/flag-new.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-4">
-                                <div class="inner inline-grid">
-                                    <div class="img-box">
-                                        <img src="https://image.aladin.co.kr/product/6688/28/cover500/8959893552_1.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <ul>
-                                            <li class="book-category">
-                                                <span>주식/펀드</span>
-                                            </li>
-                                            <li class="book-title">[eBook] 실전 투자강의</li>
-                                            <li class="book-writer">앙드레 코스톨라니 / 미래의창</li>
-                                            <li class="underline"></li>
-                                            <li class="book-des">전설적인 투자자,<br>앙드레 코스톨라니가 들려주는 투자의 정글에서 살아남기<br><br>"나는
-                                                오랜 경험을 통해 투자와 시장에 대한 대답을 찾아냈다.<br>이제 내게 필요한 것은 그 대답에 대한 질문뿐이다."</li>
-                                            <li class="book-event">
-                                                <span class="book-event_title">관련 이벤트</span>
-                                                <span>바나나 장바구니(대상도서 1권 이상 구매 시)</span>
-                                            </li>
-                                        </ul>
-                                        <div class="flag-box">
-                                            <img src="image/flag-best.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide-title">
-                        <ul>
-                            <li>화제의 신간</li>
-                            <li>주간 베스트셀러</li>
-                            <li>편집장의 선택</li>
-                            <li>eBook 베스트</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="section-recom">
-                <div class="container">
-                    <div class="title">
-                        <h1>추천 마법사의 선택</h1>
-                        <p>지금 로그인하시면 추천 마법사가 선택한 책을 보여드립니다!</p>
-                        <ul class="keywords inline-grid">
-                            <li>추천 키워드</li>
-                            <li>#인문학</li>
-                            <li>#소설</li>
-                            <li>#사회문제</li>
-                            <li>#에세이</li>
-                        </ul>
-                    </div>
-                    <div class="swiper-recom">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-1 float-grid">
-                                <div class="slide_1">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>인문학</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29175/16/cover500/k462837678_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">우리말 어휘력 사전</h2>
-                                            <p class="book-writer">박영수 / 유유</p>
-                                            <p class="book-des">말힘과 글힘의 기초를 다지는 단어 수업</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_2">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>자기계발</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29155/28/cover500/k512837377_2.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">행복하냐는 질문에 대답할 수 없다면</h2>
-                                            <p class="book-writer">알랭 드 보통, 인생학교 / 미래엔아이세움</p>
-                                            <p class="book-des">힘들고 지친 당신을 위한 15가지 깨달음</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_3">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>과학소설</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29229/10/cover500/8934921579_2.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">씨앗을 뿌리는 사람의 우화</h2>
-                                            <p class="book-writer">옥타비아 버틀러 / 비채</p>
-                                            <p class="book-des">날카로운 통찰과 상상력으로 완성한 가장 현실적인 디스토피아</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_4">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>한국소설</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29168/99/cover500/k022837474_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">안녕 주정뱅이 (리커버 특별판)</h2>
-                                            <p class="book-writer">권여선 / 창비</p>
-                                            <p class="book-des">인생이 던지는 잔혹한 농담</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-2 float-grid">
-                                <div class="slide_5">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>육아</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29251/29/cover500/k252837395_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">아, 육아란 원래 이런 거구나!</h2>
-                                            <p class="book-writer">마이클렌 다우클레프 / 시프</p>
-                                            <p class="book-des">자율적인 아이와 단단한 부모를 위한 천년의 육아법</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_6">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>추리/미스터리소설</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29168/95/cover500/k972837474_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">시체를 보는 사나이 1부: 더 비기닝 1</h2>
-                                            <p class="book-writer">공한K / 팩토리나인</p>
-                                            <p class="book-des">이 시체가 모두 나에게만 보인다고?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_7">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>사회문제</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/28430/37/cover500/k142835415_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">유언을 만난 세계</h2>
-                                            <p class="book-writer">정창조, 강혜민, 최예륜 외 / 오월의봄</p>
-                                            <p class="book-des">장애해방열사, 죽어서도 여기 머무는 자</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_8">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>인문 에세이</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <!-- <span class="book-event_title">관련 이벤트</span> -->
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/28582/75/cover500/k432836986_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">누구에게나 신이 필요한 순간이 있다</h2>
-                                            <p class="book-writer">에릭 와이너 / 어크로스</p>
-                                            <p class="book-des">아직 당신의 신을 만나지 못했나요?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-box">
-                            <div class="swiper-button-next">
-                                <img src="image/Arrow-next.svg" alt="">
-                            </div>
-                            <div class="swiper-button-prev">
-                                <img src="image/Arrow-next.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-today">
-                <div class="container">
-                    <div class="title">
-                        <h1>오늘의 한 문장</h1>
-                    </div>
-                    <div class="inner inline-grid">
-                        <div class="book-box">
-                            <div class="book-img-box">
-                                <div class="book-left">
-                                    <div class="img-box">
-                                        <img id="book-img-left"
-                                            src="https://image.aladin.co.kr/product/29250/62/cover500/k982837392_1.jpg"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="book-center">
-                                    <div class="img-box">
-                                        <img id="book-img-center"
-                                            src="https://image.aladin.co.kr/product/29246/9/cover500/8932922055_1.jpg"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="book-right">
-                                    <div class="img-box">
-                                        <img id="book-img-right"
-                                            src="https://image.aladin.co.kr/product/29231/77/cover500/k252837196_1.jpg"
-                                            alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="book-text-box">
-                                <div class="book-left">
-                                    <ul>
-                                        <li class="line">
-                                            <span></span>
-                                            <span></span>
-                                        </li>
-                                        <li class="book-title">그래서... 이런 말이 생겼습니다</li>
-                                        <li class="book-writer">금정연 지음</li>
-                                    </ul>
-                                </div>
-                                <div class="book-right">
-                                    <ul>
-                                        <li class="line">
-                                            <span></span>
-                                            <span></span>
-                                        </li>
-                                        <li class="book-title">더러운 손을 거기에 닦지 마</li>
-                                        <li class="book-writer">아시자와 요 지음</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-main">
-                            <div class="text-box book-center active">
-                                <p class="sent">호주에서 등교 거부 시위 조직에 앞장섰던 열다섯 살의 노스라트 파레하는 정치인들을 향해 이렇게 외쳤다. 「당신들은 우리 미래를
-                                    짓뭉개고 있어요. 우리는 더 나은 미래를 원해요. 젊은 사람들은 투표조차 할 수 없는데 당신들이 아무 대응도 하지 않으면 그 결과는 고스란히 우리
-                                    젊은이들 몫이 될 겁니다.」</p>
-                                <h2 class="book-title">『미래가 우리 손을 떠나기 전에』</h2>
-                                <h3 class="book-writer">나오미 클라인,리베카 스테포프 지음<br>이순희 옮김</h3>
-                            </div>
-                            <div class="text-box book-left">
-                                <p class="sent">우리에게 필요한 것은 모든 선택을 완벽히 할 수 있는 능력이 아니라, (미국의 신학자 라인홀드 니부어의 유명한 기도문을 빌리면)
-                                    "우리가 바꿀 수 없는 것을 받아들이는 평온"과 "바꿔야 할 것을 바꿀 수 있는 용기", 그리고 "이 둘을 분별하는 지혜"일 테다. 오랜만에 지나치게
-                                    진지해서 웃음이 나오는 부조리극처럼 말하자면, 평온과 용기와 지혜가 국룰이다....</p>
-                                <h2 class="book-title">『그래서... 이런 말이 생겼습니다』</h2>
-                                <h3 class="book-writer">금정연 지음<br></h3>
-                            </div>
-                            <div class="text-box book-right">
-                                <p class="sent">아내는 가스 불 끄는 것을 잊을까 두려워서 혼자 있을 때는 불을 사용하지 않는다. 하지만 이대로 증상이 진행되면 혼자 있을 때는
-                                    불을 사용하지 않는다는 것 자체를 잊을지도 모른다.</p>
-                                <h2 class="book-title">『더러운 손을 거기에 닦지 마』</h2>
-                                <h3 class="book-writer">아시자와 요 지음<br>박정임 옮김</h3>
-                            </div>
-                            <div class="bg-box">
-                                <img src="image/Croods Sitting-f.png" alt="">
-                                <img src="image/Croods Sitting on Floor-m.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="today-bg"></div>
-            </div>
-            <div class="section-records">
-                <div class="container">
-                    <div class="title">
-                        <h1>알라딘 추천 음반</h1>
-                        <ul class="float-grid">
-                            <li><a href="#">화제의 신간</a></li>
-                            <li><a href="#">주간 베스트셀러</a></li>
-                            <li><a href="#">예약 음반</a></li>
-                        </ul>
-                    </div>
-                    <div class="swiper-records">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-1 float-grid">
-                                <div class="slide_1">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29307/50/cover500/c262936803_0.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 댄스뮤직</span>
-                                                    <span>가요 > 힙합</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">[키트 형태] 강승윤 - YG PALM STAGE 2021 [YOON : PASSAGE] KiT
-                                                VIDEO [키노앨범]</h2>
-                                            <p class="book-writer">강승윤 (KANG SEUNG YOON) / YG 플러스</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_2">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29288/74/cover500/c682936693_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 발라드/R&B</span>
-                                                    <span>LP > 가요</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">핫펠트 - LEFT LP [화이트 LP][한정반]</h2>
-                                            <p class="book-writer">핫펠트(예은) / 스톤뮤직엔터테인먼트(Stone Music Ent.)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_3">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29299/11/cover500/c052936705_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 댄스뮤직</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">싸이 - 정규 9집 싸다9</h2>
-                                            <p class="book-writer">싸이 (Psy) / 피네이션</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_4">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29308/15/cover500/c542936803_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>클래식 > 실내악</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">[수입] 풀랑 : 실내악 전집 [5CD]</h2>
-                                            <p class="book-writer">풀랑크 (Francis Poulenc), 여러 아티스트 (Various Artists) /
-                                                낙소스(NAXOS)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-2 float-grid">
-                                <div class="slide_5">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29263/72/cover500/c532936398_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 댄스뮤직</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">[SET] 투모로우바이투게더 - 미니 4집 minisode 2: Thursday's Child
-                                                [HATE+END+MESS Ver.]</h2>
-                                            <p class="book-writer">투모로우바이투게더 (TOMORROW X TOGETHER) / BIGHIT MUSIC / YG
-                                                PLUS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_6">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29283/30/cover500/c792936596_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>O.S.T. > TV 드라마음악</span>
-                                                    <span>LP > O.S.T.</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">그 해 우리는 O.S.T [LP] (2차 판매분)</h2>
-                                            <p class="book-writer">십센치 (10cm), 여러 아티스트 (Various Artists) / 벅스</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_7">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29284/63/cover500/c852936597_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 힙합</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">스월비 - 정규 1집 Undercover Angel [일반반]</h2>
-                                            <p class="book-writer">스월비 (Swervy) / 인터파크/뮤직앤뉴</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_8">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29266/17/cover500/c982936391_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 발라드/R&B</span>
-                                                    <span>LP > 가요</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <!-- <span class="book-event_title">관련 이벤트</span> -->
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">전람회 - 2집 [180g LP]</h2>
-                                            <p class="book-writer">전람회 / 대영에이브이</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-3 float-grid">
-                                <div class="slide_9">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/28999/75/cover500/c092936467_0.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 댄스뮤직</span>
-                                                    <span>LP > 가요</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <!-- <span class="book-event_title">관련 이벤트</span> -->
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">태연 - 정규 3집 INVU [BLUE / ORANGE 2LP][한정반]</h2>
-                                            <p class="book-writer">태연 (TAEYEON) / SM 엔터테인먼트</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_10">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29300/27/cover500/c862936705_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 인디음악</span>
-                                                    <span>LP > 가요</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <!-- <span class="book-event_title">관련 이벤트</span> -->
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">백아 - 우주선 [140g BABY PINK 투명 LP]</h2>
-                                            <p class="book-writer">백아BAEK A / 삼원기획</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_11">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29191/24/cover500/c322936183_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 성인가요/트로트</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">임영웅 - 정규 1집 IM HERO (GIFT Ver.) [한정반]</h2>
-                                            <p class="book-writer">임영웅 / 드림어스</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_12">
-                                    <div class="inner">
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/29232/26/cover500/c932936891_0.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>가요 > 댄스뮤직</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="text-box">
-                                            <h2 class="book-title">미연 - 미니 1집 MY</h2>
-                                            <p class="book-writer">미연 ((여자)아이들) / Kakao Entertainment</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-event">
-                <div class="title-box">
-                    <div class="inner">
-                        <div class="title">
-                            <div class="img-box">
-                                <img src="https://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif" alt="">
-                            </div>
-                            <h1>이 달의 이벤트</h1>
-                        </div>
-                        <div class="sub-title">
-                            <ul>
-                                <li class="active"><a href="#">알라딘TV 북토크</a></li>
-                                <li><a href="#">적립금 꼭 챙기세요!</a></li>
-                                <li><a href="#">이 시간 굿즈 총집합</a></li>
-                                <li><a href="#">독보적챌린지+2200원</a></li>
-                                <li><a href="#">알라딘마켓-퀘스트적립금</a></li>
-                                <li><a href="#">책의 날 유리컵</a></li>
-                                <li><a href="#">외국도서! 느리게 읽기</a></li>
-                                <li><a href="#">피너츠 북스탠드</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="contents-box">
-                    <div class="inner">
-                        <div class="swiper-event">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide slide-1">
-                                    <img src="image/event-1-re.png" alt="">
-                                    <button>신청하기 CLICK!</button>
-                                </div>
-                                <div class="swiper-slide slide-2">
-                                    <img src="image/event-2-re.png" alt="">
-                                    <button>퀴즈 참여하기</button>
-                                    <button>투표 참여하기</button>
-                                    <button>이벤트 보기</button>
-                                    <button>앱 다운로드</button>
-                                    <button>앱 다운로드</button>
-                                    <button>구독하기</button>
-                                    <button>이벤트 보기</button>
-                                    <button>퀴즈 참여하기</button>
-                                    <button>이벤트 보기</button>
-                                </div>
-                                <div class="swiper-slide slide-3">
-                                    <img src="image/event-3-re.png" alt="">
-                                    <ul class="float-grid">
-                                        <li><a href="#"><span><br>플립북 책갈피</span>읽는 일과 쓰는 일</a></li>
-                                        <li><a href="#"><span><br>북트래커, 밑줄 테이프</span>사계절출판사 40주년 브랜드관</a></li>
-                                        <li><a href="#"><span><br>원고지 노트</span>이어령<br>&lt;거시기 머시기&gt;</a></li>
-                                        <li><a href="#"><span>투명 홀로그램 파우치<br>& 노트</span>&lt;옥타비아 버틀러&gt;</a></li>
-                                        <li><a href="#"><span><br>마켓백</span>매일 매일 어린이날</a></li>
-                                        <li><a href="#"><span><br>과학사 연표</span>과학의 달</a></li>
-                                        <li><a href="#"><span>&lt;다섯 번째 감각&gt;<br>미니 금장 노트</span>우리들의 작가, 김보영</a></li>
-                                        <li><a href="#"><span>일러스트 도자기<br>접시 2종</span>&lt;박막례시피&gt;<br>봄 리커버 에디션</a></li>
-                                        <li><a href="#"><span><br>바닥 그림 유리 머그</span>예술의 정원</a></li>
-                                        <li><a href="#"><span>&lt;올리브 키터리지&gt;<br>유리컵</span>&lt;올리브 키터리지&gt;<br>&lt;다시, 올리브&gt; 리커버<br>단독 판매</a></li>
-                                        <li><a href="#"><span><br>특별 부록</span>&lt;나의 비거니즘 만화&gt; 리커버 한정판</a></li>
-                                        <li><a href="#"><img src="image/Close.svg" alt="">더보기</a></li>
-                                    </ul>
-                                </div>
-                                <div class="swiper-slide slide-4">
-                                    <img src="image/event-4-re.png" alt="">
-                                    <button>독보적 서비스 자세히 알아보기</button>
-                                    <button>지난달 독보적 챌린지 확인</button>
-                                </div>
-                                <div class="swiper-slide slide-5">
-                                    <img src="image/event-5-re.png" alt="">
-                                    <button>자세히 보기</button>
-                                </div>
-                                <div class="swiper-slide slide-6">
-                                    <img src="image/event-6-re.png" alt="">
-                                    <button>INDEX : 원하는 주제를 골라보세요</button>
-                                </div>
-                                <div class="swiper-slide slide-7">
-                                    <img src="image/event-7-re.png" alt="">
-                                    <button>슬로우 미러클 카페</button>
-                                </div>
-                                <div class="swiper-slide slide-8">
-                                    <img src="image/event-8-re.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-used">
-                <!-- <div class="used-title">
-                    <div class="container">
-                        <h1><img src="https://image.aladin.co.kr/img/header/2011/aladin_logo_used_new.gif" alt=""></h1>
-                    </div>
-                </div> -->
-                <div class="container">
-                    <div class="title">
-                        <h1>알라딘 추천 중고상품</h1>
-                        <ul class="float-grid">
-                            <li><a href="#">주간 베스트셀러</a></li>
-                            <li><a href="#">새로 들어온 상품</a></li>
-                        </ul>
-                    </div>
-                    <div class="swiper-used">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-1 float-grid">
-                                <div class="slide_1">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>한국소설</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/27877/5/cover500/k692835315_2.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">작별하지 않는다</h2>
-                                            <p class="book-writer">한강 / 문학동네</p>
-                                            <p class="book-des">이것이 지극한 사랑에 대한 소설이기를 빈다.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_2">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>한국 과학소설</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/27692/63/cover500/s512837901_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">지구 끝의 온실</h2>
-                                            <p class="book-writer">김초엽 / 자이언트북스</p>
-                                            <p class="book-des">당신이 이 세계를 아직 사랑하고 있다면</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_3">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>한국소설</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/27802/70/cover500/k832734163_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">재인, 재욱, 재훈 (리커버 에디션)</h2>
-                                            <p class="book-writer">정세랑 / 은행나무</p>
-                                            <p class="book-des">우리의 매일을 구하는 건 작고 우연한 상냥함이다</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_4">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>일본 추리/미스터리소설</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <!-- <span class="book-event_title">관련 이벤트</span> -->
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/28013/21/cover500/k852734936_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">소문</h2>
-                                            <p class="book-writer">오기와라 히로시 / 모모</p>
-                                            <p class="book-des">“마지막 4글자에 모든 것이 뒤바뀐다!”</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-2 float-grid">
-                                <div class="slide_5">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>비룡소 플래닛</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <!-- <span class="book-event_title">관련 이벤트</span> -->
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/23400/44/cover500/8949135051_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">내 친구 스누피 4</h2>
-                                            <p class="book-writer">찰스 M. 슐츠 / 비룡소 플래닛</p>
-                                            <p class="book-des">「내 친구 스누피」 원작 만화의 놀라운 기록</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_6">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>청소년 소설</span>
-                                                    <span>그래픽노블
-                                                </li>
-                                                <li class="book-event">
-                                                    <span class="book-event_title">관련 이벤트</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/27609/43/cover500/k782733020_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">우리가 농구에 미치는 이유</h2>
-                                            <p class="book-writer">진 루엔 양 / 우리학교</p>
-                                            <p class="book-des">『슬램 덩크』에 이어 ‘농구’ 하면 떠오를 대표적인 책이 탄생했다</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_7">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>독서에세이</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <!-- <span class="book-event_title">관련 이벤트</span> -->
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/20608/98/cover500/8998614707_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">어른의 그림책</h2>
-                                            <p class="book-writer">황유진 / 메멘토</p>
-                                            <p class="book-des">마음의 온도를 재는 시간</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slide_8">
-                                    <div class="inner">
-                                        <div class="tag-box">
-                                            <ul>
-                                                <li class="book-category">
-                                                    <span>한국에세이</span>
-                                                </li>
-                                                <li class="book-event">
-                                                    <!-- <span class="book-event_title">관련 이벤트</span> -->
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="img-box">
-                                            <img src="https://image.aladin.co.kr/product/27876/43/cover500/k872734898_1.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="text-box text-box_bg">
-                                            <h2 class="book-title">우린 한낮에도 프리랜서를 꿈꾸지</h2>
-                                            <p class="book-writer">박현아 / 세나북스</p>
-                                            <p class="book-des">나만의 라이프스타일을 꿈꾸는 분들에게</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resell-box">
-                        <div class="inner inline-grid">
-                            <ul class="input-box">
-                                <li>중고상품 매입가를 조회해 보세요</li>
-                                <li>
-                                    <span>상품타입</span>
-                                    <span>
-                                        <input type="radio" id="resell-1" name="resell" checked="true"><label
-                                            for="resell-1">국내도서</label>
-                                        <input type="radio" id="resell-2" name="resell"><label
-                                            for="resell-2">외국도서</label>
-                                        <input type="radio" id="resell-3" name="resell"><label for="resell-3">음반</label>
-                                        <input type="radio" id="resell-4" name="resell"><label
-                                            for="resell-4">DVD/블루레이</label>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>상품명 또는 ISBN</span>
-                                    <span>
-                                        <input type="text"><button>검색</button>
-                                    </span>
-                                </li>
-                                <li>스마트폰으로 바코드를 촬영하면 중고로 팔 수 있어요</li>
-                            </ul>
-                            <ul class="inform-box">
-                                <li>조회한 매입 예상가, 매입 여부는 실제 매입가와 다를 수 있습니다.</li>
-                                <li>
-                                    <ul>
-                                        <li>조회한 매입 예상가는 현재의 정가에 대한 것으로, 동일 ISBN의 구정가의 경우 실제 매입가가 낮아질 수 있습니다.</li>
-                                        <li>매입가와 판매 가능 여부는 실시간으로 변경되므로 매장 방문 시점에 상품의 적정 재고량을 초과하면 매입가가 내려가거나 매입되지 않을 수
-                                            있습니다. (온라인 매입은 접수완료 시간 기준)</li>
-                                        <li>매입 가능한 상품이어도 상품의 품질 상태에 따라 매입불가일 수 있습니다. </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span>매입불가 품질 상태 자세히 보기</span>
-                                    <span>중고매장 FAQ</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="map-title">
-                    <div class="container">
-                        <h1>전국 알라딘 중고매장</h1>
-                    </div>
-                </div>
-                <div class="map-contents">
-                    <div class="container inline-grid">
-                        <div class="map-box">
-                            <div class="img-box">
-                                <img src="image/map.png" alt="">
-                                <div class="point-box">
-                                    <button class="incheon">
-                                        <span>인천광역시</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="seoul">
-                                        <span>서울특별시</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="gangwon no-store">
-                                        <span>강원도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="gyeonggi">
-                                        <span>경기도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="chungbuk no-store">
-                                        <span>충청북도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="chungnam no-store">
-                                        <span>충청남도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="daejeon">
-                                        <span>대전광역시</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="gyeongbuk no-store">
-                                        <span>경상북도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="jeonbuk">
-                                        <span>전라북도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="daegu">
-                                        <span>대구광역시</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="ulsan">
-                                        <span>울산광역시</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="gwangju">
-                                        <span>광주광역시</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="gyeongnam">
-                                        <span>경상남도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="busan">
-                                        <span>부산광역시</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="jeonnam no-store">
-                                        <span>전라남도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                    <button class="jeju no-store">
-                                        <span>제주도</span>
-                                        <span class="point"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-box">
-                            <ul class="float-grid list-box-1">
-                                <div class="title-box">
-                                    <span class="title">서울특별시</span>
-                                    <span>해당 지점명을 선택하시면 보유도서를 검색할 수 있습니다.</span>
-                                </div>
-                                <li>가로수길점</li>
-                                <li>강남점</li>
-                                <li class="lh-130">강서<br>홈플러스점</li>
-                                <li>건대점</li>
-                                <li>노원역점</li>
-                                <li>대학로점</li>
-                                <li class="lh-130">서울대<br>입구역점</li>
-                                <li>수유점</li>
-                                <li>신림점</li>
-                                <li>신촌점</li>
-                                <li>연신내점</li>
-                                <li class="lh-130">영등포<br>타임스퀘어점</li>
-                                <li>이수역점</li>
-                                <li class="lh-130">잠실롯데<br>월드타워점</li>
-                                <li class="lh-130">잠실<br>새내역점</li>
-                                <li>종로점</li>
-                                <li>합정점</li>
-                            </ul>
-                            <ul class="float-grid list-box-2">
-                                <div class="title-box">
-                                    <span class="title">경기도</span>
-                                </div>
-                                <li class="lh-130">동탄2<br>하나로마트점</li>
-                                <li>동탄점</li>
-                                <li>부천점</li>
-                                <li class="lh-130">분당<br>서현점</li>
-                                <li class="lh-130">분당<br>야탑점</li>
-                                <li>산본점</li>
-                                <li class="lh-130">수원<br>시청역점</li>
-                                <li>수원점</li>
-                                <li>일산점</li>
-                                <li>화정점</li>
-                            </ul>
-                            <ul class="float-grid list-box-3">
-                                <div class="title-box">
-                                    <span class="title">광역시 등</span>
-                                </div>
-                                <li class="lh-130 gwangju">광주<br>상무점</li>
-                                <li class="lh-130 gwangju">광주<br>충장로점</li>
-                                <li class="gyeongnam">김해점</li>
-                                <li class="lh-130 daegu">대구<br>동성로점</li>
-                                <li class="lh-130 daegu">대구<br>상인점</li>
-                                <li class="lh-130 daejeon">대전<br>시청역점</li>
-                                <li class="lh-130 daejeon">대전<br>은행점</li>
-                                <li class="daegu">동대구역점</li>
-                                <li class="lh-130 gyeongnam">마산<br>합성점</li>
-                                <li class="lh-130 busan">부산 경성대<br>부경대역점</li>
-                                <li class="lh-130 busan">부산<br>덕천점</li>
-                                <li class="lh-130 busan">부산<br>서면점</li>
-                                <li class="lh-130 busan">부산<br>센텀점</li>
-                                <li class="ulsan">울산점</li>
-                                <li class="lh-130 incheon">인천 계산<br>홈플러스점</li>
-                                <li class="lh-130 incheon">인천<br>구월점</li>
-                                <li class="lh-130 incheon">인천<br>송도점</li>
-                                <li class="jeonbuk">전주점</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="header_menu">
+        <div class="container">
+          <div class="inner">
+            <ul>
+              <div>
+                <li class="btn-category"><span>전체 카테고리 보기</span></li>
+                <li><a href="#">중고매장 찾기</a></li>
+                <li><a href="#">알라딘 굿즈</a></li>
+                <li><a href="#">기프티북</a></li>
+                <!-- <li class="hashtag"><a href="#">#해리포터</a></li> -->
+                <li class="hashtag"><a href="#">#김영하</a></li>
+                <li class="hashtag"><a href="#">#롤랑의 노래</a></li>
+                <li class="hashtag"><a href="#">#에세이</a></li>
+                <li class="hashtag"><a href="#">#이자람</a></li>
+              </div>
+            </ul>
+          </div>
         </div>
-        <div class="footer">
-            <div class="notice">
-                <div class="container float-grid">
-                    <div class="title">
-                        <h1>공지사항</h1>
-                    </div>
-                    <div class="swiper-notice">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-1">
-                                <span>[채용공고] 총무팀 사무보조 계약직</span>
-                            </div>
-                            <div class="swiper-slide slide-2">
-                                <span>[채용공고] 고객센터 고객상담원</span>
-                            </div>
-                            <div class="swiper-slide slide-3">
-                                <span>장바구니 내역 정비(2022.4.19.화. 02시-07시)</span>
-                            </div>
-                            <div class="swiper-slide slide-4">
-                                <span>[채용공고] 개발센터 정보보안 담당자</span>
-                            </div>
-                            <div class="swiper-slide slide-5">
-                                <span>해외배송(DHL) 운임료 일부 인상(2022년 4월 11일)</span>
-                            </div>
-                        </div>
-                        <div class="swiper-button-box">
-                            <div class="swiper-button-next">
-                                <img src="image/Arrow-next.svg" alt="">
-                            </div>
-                            <div class="swiper-button-prev">
-                                <img src="image/Arrow-next.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
+        <div class="popup-category">
+          <div class="container">
+            <ul>
+              <li>
+                <div class="title">국내도서</div>
+                <div class="text float-grid">
+                  <ul>
+                    <li><a href="#">유아</a></li>
+                    <li><a href="#">어린이</a></li>
+                    <li><a href="#">전집/중고전집</a></li>
+                    <li><a href="#">청소년</a></li>
+                    <li><a href="#">좋은부모</a></li>
+                    <li><a href="#">초등학교참고서</a></li>
+                    <li><a href="#">중학교참고서</a></li>
+                    <li><a href="#">고등학교참고서</a></li>
+                    <li><a href="#">여행</a></li>
+                    <li><a href="#">가정/요리/뷰티</a></li>
+                    <li><a href="#">건강/취미/레저</a></li>
+                    <li><a href="#">달력/기타</a></li>
+                    <li><a href="#">잡지</a></li>
+                    <li><a href="#">만화</a></li>
+                    <li><a href="#">고전</a></li>
+                    <li><a href="#">소설/시/희곡</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="#">장르소설</a></li>
+                    <li><a href="#">에세이</a></li>
+                    <li><a href="#">인문학</a></li>
+                    <li><a href="#">사회과학</a></li>
+                    <li><a href="#">역사</a></li>
+                    <li><a href="#">과학</a></li>
+                    <li><a href="#">예술/대중문화</a></li>
+                    <li><a href="#">종교/역학</a></li>
+                    <li><a href="#">경제경영</a></li>
+                    <li><a href="#">자기계발</a></li>
+                    <li><a href="#">외국어</a></li>
+                    <li><a href="#">컴퓨터/모바일</a></li>
+                    <li><a href="#">대학교재</a></li>
+                    <li><a href="#">수험서/자격증</a></li>
+                    <li><a href="#">공무원 수험서</a></li>
+                  </ul>
                 </div>
-            </div>
-            <div class="corp">
-                <div class="container">
-                    <ul class="footer-menu">
-                        <div>
-                            <li>회사소개</li>
-                            <li>이용약관</li>
-                            <li>개인정보처리방침</li>
-                            <li>청소년 보호정책</li>
-                            <li>중고매장</li>
-                            <li>제휴/마케팅 안내</li>
-                            <li>판매자 매니저</li>
-                            <li>출판사/공급사 안내</li>
-                            <li>광고 안내</li>
-                            <li>학교/기업 대량구매</li>
-                        </div>
-                    </ul>
-                    <div class="biz">
-                        <div class="img-box">
-                            <img src="https://image.aladin.co.kr/img/footer/2013/foot_aladin_01.gif" alt="">
-                        </div>
-                        <ul>
-                            <li>(주)알라딘커뮤니케이션</li>
-                            <li>
-                                <span>대표이사 : 최우경</span><span>고객정보보호 책임자 : 최우경</span>
-                            </li>
-                            <li>
-                                <span>사업자등록 : 201-81-23094</span><span class="text-deco">E-mail :
-                                    privacy@aladin.co.kr</span>
-                            </li>
-                            <li>
-                                <span>통신판매업신고 : 중구01520호</span><span>호스팅 제공자 : 알라딘커뮤니케이션</span>
-                            </li>
-                            <li>
-                                <span>(본사) 서울시 중구 서소문로 89-31</span><span class="text-deco">(중고매장) 자세히보기</span>
-                            </li>
-                            <li>(고객센터) 서울시 마포구 백범로 71 숨도빌딩 7층, Fax 02-6926-2600</li>
-                            <li>ⓒ Aladin Communication. All Rights Reserved.</li>
-                        </ul>
-                    </div>
+              </li>
+              <li>
+                <div class="title">외국도서</div>
+                <div class="text float-grid">
+                  <ul>
+                    <li><a href="#">영미도서</a></li>
+                    <li><a href="#">소설/시/희곡</a></li>
+                    <li><a href="#">ELT/어학/사전</a></li>
+                    <li><a href="#">인문/사회</a></li>
+                    <li><a href="#">경제경영</a></li>
+                    <li><a href="#">자기계발</a></li>
+                    <li><a href="#">자연과학</a></li>
+                    <li><a href="#">컴퓨터</a></li>
+                    <li><a href="#">예술/대중문화</a></li>
+                    <li><a href="#">가정/원예/인테리어</a></li>
+                    <li><a href="#">공예/취미/수집</a></li>
+                    <li><a href="#">여행</a></li>
+                    <li><a href="#">건강/스포츠</a></li>
+                    <li><a href="#">청소년</a></li>
+                    <li><a href="#">해외잡지</a></li>
+                    <li><a href="#">일본도서</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="#">잡지</a></li>
+                    <li><a href="#">코믹</a></li>
+                    <li><a href="#">문학</a></li>
+                    <li><a href="#">실용/취미/생활</a></li>
+                    <li><a href="#">애니메이션 굿즈</a></li>
+                    <li><a href="#">중국도서</a></li>
+                    <li><a href="#">소설</a></li>
+                    <li><a href="#">중국어 교재</a></li>
+                    <li><a href="#">어린이</a></li>
+                    <li><a href="#">캐릭터</a></li>
+                    <li><a href="#">그림책</a></li>
+                    <li><a href="#">리더스</a></li>
+                    <li><a href="#">챕터북</a></li>
+                    <li><a href="#">동화책</a></li>
+                    <li><a href="#">오디오북</a></li>
+                    <li><a href="#">어린이사전</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="#">개념학습</a></li>
+                    <li><a href="#">코스북</a></li>
+                    <li><a href="#">영어학습</a></li>
+                    <li><a href="#">교과학습</a></li>
+                    <li><a href="#">미국교과서</a></li>
+                    <li><a href="#">수상작</a></li>
+                    <li><a href="#">제2외국어/이중언어</a></li>
+                    <li><a href="#">기타 언어권</a></li>
+                    <li><a href="#">프랑스 도서</a></li>
+                    <li><a href="#">독일 도서</a></li>
+                    <li><a href="#">스페인 도서</a></li>
+                    <li><a href="#">베트남 도서</a></li>
+                    <li><a href="#">기타 도서</a></li>
+                  </ul>
                 </div>
-            </div>
-            <div class="btn-to-top">
-                <button>▲</button>
-            </div>
+              </li>
+              <li>
+                <div class="title">eBook</div>
+                <div class="text float-grid">
+                  <ul>
+                    <li><a href="#">소설/시</a></li>
+                    <li><a href="#">로맨스</a></li>
+                    <li><a href="#">라이트노벨</a></li>
+                    <li><a href="#">판타지/무협</a></li>
+                    <li><a href="#">만화</a></li>
+                    <li><a href="#">BL</a></li>
+                    <li><a href="#">에세이</a></li>
+                    <li><a href="#">자기계발</a></li>
+                    <li><a href="#">경제경영</a></li>
+                    <li><a href="#">사회과학</a></li>
+                    <li><a href="#">인문학</a></li>
+                    <li><a href="#">역사</a></li>
+                    <li><a href="#">청소년</a></li>
+                    <li><a href="#">예술/대중문화</a></li>
+                    <li><a href="#">종교/역학</a></li>
+                    <li><a href="#">어린이</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="title">eBook 뷰어</div>
+                <div class="text float-grid">
+                  <ul>
+                    <li><a href="#">아이폰 뷰어</a></li>
+                    <li><a href="#">안드로이드 뷰어</a></li>
+                    <li><a href="#">PC 뷰어</a></li>
+                    <li><a href="#">크레마</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="title">온라인 중고샵</div>
+                <div class="text float-grid">
+                  <ul>
+                    <li><a href="#">중고매장</a></li>
+                    <li><a href="#">중고 국내도서</a></li>
+                    <li><a href="#">소설/시/희곡</a></li>
+                    <li><a href="#">에세이</a></li>
+                    <li><a href="#">어린이</a></li>
+                    <li><a href="#">유아</a></li>
+                    <li><a href="#">중고전집</a></li>
+                    <li><a href="#">경제경영</a></li>
+                    <li><a href="#">인문학</a></li>
+                    <li><a href="#">사회과학</a></li>
+                    <li><a href="#">중고 음반</a></li>
+                    <li><a href="#">중고 DVD/블루레이</a></li>
+                    <li><a href="#">중고 외국도서</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="title">알라딘 굿즈</div>
+                <div class="text float-grid">
+                  <ul>
+                    <li><a href="#">문구</a></li>
+                    <li><a href="#">독서용품</a></li>
+                    <li><a href="#">데스크용품</a></li>
+                    <li><a href="#">디지털</a></li>
+                    <li><a href="#">가방·파우치</a></li>
+                    <li><a href="#">생활용품</a></li>
+                    <li><a href="#">리빙·키친</a></li>
+                    <li><a href="#">의류·잡화</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="title">음반</div>
+                <div class="text float-grid">
+                  <ul>
+                    <li><a href="#">가요</a></li>
+                    <li><a href="#">클래식</a></li>
+                    <li><a href="#">팝</a></li>
+                    <li><a href="#">재즈</a></li>
+                    <li><a href="#">국악</a></li>
+                    <li><a href="#">월드뮤직</a></li>
+                    <li><a href="#">종교/명상/기타</a></li>
+                    <li><a href="#">J-POP</a></li>
+                    <li><a href="#">OST</a></li>
+                    <li><a href="#">LP</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="title">블루레이/DVD</div>
+                <div class="text float-grid">
+                  <ul>
+                    <li><a href="#">드라마/코미디</a></li>
+                    <li><a href="#">TV시리즈</a></li>
+                    <li><a href="#">액션/어드벤처</a></li>
+                    <li><a href="#">S.F./판타지</a></li>
+                    <li><a href="#">공포/스릴러</a></li>
+                    <li><a href="#">애니메이션</a></li>
+                    <li><a href="#">음악DVD</a></li>
+                    <li><a href="#">블루레이</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <button class="btn-close"></button>
+          </div>
         </div>
+      </div>
+      <div class="header_mobile-bar">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="header_mobile-menu">
+        <div class="inner">
+          <div class="body">
+            <div class="img-box logo">
+              <img src="https://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif" alt="">
+            </div>
+            <ul class="login">
+              <li>
+                <button>로그인</button>
+              </li>
+              <li>
+                <button>마이페이지</button>
+              </li>
+              <li>
+                <button>장바구니</button>
+              </li>
+            </ul>
+            <ul class="service">
+              <li><a href="#">알라딘<br>추천 도서</a></li>
+              <li><a href="#">알라딘<br>추천 음반</a></li>
+              <li><a href="#">추천 마법사의<br>선택</a></li>
+              <li><a href="#">이 달의<br>이벤트</a></li>
+              <li><a href="#">중고매장<br>찾기</a></li>
+              <li><a href="#">중고상품<br>매입가 조회</a></li>
+              <li><a href="#">알라딘<br>굿즈</a></li>
+              <li><a href="#">알라딘<br>기프티북</a></li>
+            </ul>
+            <ul class="customer">
+              <li>고객센터</li>
+              <li>
+                <span>평일 09:00 ~ 18:00</span>
+                <span>점심시간 12:00 ~ 13:00</span>
+                <span>토,공휴일 휴무</span>
+              </li>
+              <li>1544-2514</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bg"></div>
+      </div>
     </div>
+    <div class="top-bar">
+      <div class="container">
+        <ul>
+          <div>
+            <li class="btn-sec-0"><a href="#">
+                <img src="https://image.aladin.co.kr/img/common/ev_logo.png" alt="">
+              </a></li>
+            <li class="btn-sec-1"><a href="#">알라딘 추천 도서</a></li>
+            <li class="btn-sec-2"><a href="#">알라딘 추천 음반</a></li>
+            <li class="btn-sec-3"><a href="#">이 달의 이벤트</a></li>
+            <li class="btn-sec-4"><a href="#">알라딘 중고매장</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li class="btn-search-topbar"><button></button></li>
+          </div>
+        </ul>
+      </div>
+      <div class="popup-search">
+        <div class="container">
+          <div class="top">
+            <input type="text" placeholder="검색어를 입력하세요" onfocus="this.placeholder = ''"
+              onblur="this.placeholder='검색어를 입력하세요'">
+            <button></button>
+          </div>
+          <div class="bottom">
+            <ul>
+              <div>
+                <li><a href="#">중고매장 찾기</a></li>
+                <li><a href="#">알라딘 굿즈</a></li>
+                <li><a href="#">기프티북</a></li>
+                <li class="hashtag"><a href="#">#김영하</a></li>
+                <li class="hashtag"><a href="#">#롤랑의 노래</a></li>
+                <li class="hashtag"><a href="#">#에세이</a></li>
+                <li class="hashtag"><a href="#">#이자람</a></li>
+                <li class="hashtag"><a href="#">#배우의 밤</a></li>
+              </div>
+            </ul>
+          </div>
+          <button class="btn-close"></button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-slide">
+        <div class="container">
+          <div class="swiper-main-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-1">
+                <div class="inner inline-grid">
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29231/71/cover500/k342837195_1.jpg" alt="">
+                  </div>
+                  <div class="text-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>에세이</span>
+                        <span>예술/대중문화</span>
+                      </li>
+                      <li class="book-title">배우의 방</li>
+                      <li class="book-writer">정시우 / 휴머니스트</li>
+                      <li class="underline"></li>
+                      <li class="book-des">배우의 집, 배우의 동네, 배우의 작업실…<br><br>작품 속 역할에서 빠져나와<br>배우의
+                        민낯을 볼 수 있는 곳<br><br>'배우의 방'으로 초대합니다.</li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                        <span>배우 9인의 포토카드 세트(한정 부록, 책과 래핑)</span>
+                      </li>
+                    </ul>
+                    <div class="flag-box">
+                      <img src="https://113midm.github.io/redesign_aladin/image/flag-best.png" alt="">
+                      <img src="https://113midm.github.io/redesign_aladin/image/flag-new.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-2">
+                <div class="inner inline-grid">
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29146/69/cover500/8932474648_1.jpg" alt="">
+                  </div>
+                  <div class="text-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>그리스로마 신화</span>
+                      </li>
+                      <li class="book-title">김헌의 그리스 로마 신화</li>
+                      <li class="book-writer">김헌 / 을유문화사</li>
+                      <li class="underline"></li>
+                      <li class="book-des">서울대 서양 고전 열풍의 주역,<br>김헌 교수의 신화 마스터클래스</li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                        <span>4월 특별선물! 피너츠 북스탠드, 블루투스 스피커(이벤트 도서 포함, 국내서.외서 5만원 이상)</span>
+                      </li>
+                    </ul>
+                    <div class="flag-box">
+                      <img src="https://113midm.github.io/redesign_aladin/image/flag-best.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-3">
+                <div class="inner inline-grid">
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29224/88/cover500/k102837999_1.jpg" alt="">
+                  </div>
+                  <div class="text-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>사회사상</span>
+                        <span>민족주의</span>
+                      </li>
+                      <li class="book-title">인종, 국민, 계급</li>
+                      <li class="book-writer">에티엔 발리바르 / 두번째테제</li>
+                      <li class="underline"></li>
+                      <li class="book-des">1988년 프랑스에서 초판이 출간된 이래로<br>여러 나라에서 번역되고 논의되어 온 학제간 연구의
+                        고전<br><br>전쟁과 혼란, 갈등이 증폭하는 시대<br>세 가지 키워드 ‘인종, 국민 계급’을 분석하고 탈구축하며
+                        살펴보는<br>앞으로의 세계 모습과 이론의 향방</li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                        <span>화제의 책+미니 에코백(이벤트 도서 포함, 국내서 4만원 이상)</span>
+                      </li>
+                    </ul>
+                    <div class="flag-box">
+                      <img src="https://113midm.github.io/redesign_aladin/image/flag-new.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-4">
+                <div class="inner inline-grid">
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/6688/28/cover500/8959893552_1.jpg" alt="">
+                  </div>
+                  <div class="text-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>주식/펀드</span>
+                      </li>
+                      <li class="book-title">[eBook] 실전 투자강의</li>
+                      <li class="book-writer">앙드레 코스톨라니 / 미래의창</li>
+                      <li class="underline"></li>
+                      <li class="book-des">전설적인 투자자,<br>앙드레 코스톨라니가 들려주는 투자의 정글에서 살아남기<br><br>"나는
+                        오랜 경험을 통해 투자와 시장에 대한 대답을 찾아냈다.<br>이제 내게 필요한 것은 그 대답에 대한 질문뿐이다."</li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                        <span>바나나 장바구니(대상도서 1권 이상 구매 시)</span>
+                      </li>
+                    </ul>
+                    <div class="flag-box">
+                      <img src="https://113midm.github.io/redesign_aladin/image/flag-best.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-title">
+            <ul>
+              <li>화제의 신간</li>
+              <li>주간 베스트셀러</li>
+              <li>편집장의 선택</li>
+              <li>eBook 베스트</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section-recom">
+        <div class="container">
+          <div class="title">
+            <h1>추천 마법사의 선택</h1>
+            <p>지금 로그인하시면 추천 마법사가 선택한 책을 보여드립니다!</p>
+            <ul class="keywords inline-grid">
+              <li>추천 키워드</li>
+              <li>#인문학</li>
+              <li>#소설</li>
+              <li>#사회문제</li>
+              <li>#에세이</li>
+            </ul>
+          </div>
+          <div class="swiper-recom">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-1 slide_1">
+                <div class="inner">
+                  <div class="tag-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>인문학</span>
+                      </li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29175/16/cover500/k462837678_1.jpg" alt="">
+                  </div>
+                  <div class="text-box text-box_bg">
+                    <h2 class="book-title">우리말 어휘력 사전</h2>
+                    <p class="book-writer">박영수 / 유유</p>
+                    <p class="book-des">말힘과 글힘의 기초를 다지는 단어 수업</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-2 slide_2">
+                <div class="inner">
+                  <div class="tag-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>자기계발</span>
+                      </li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29155/28/cover500/k512837377_2.jpg" alt="">
+                  </div>
+                  <div class="text-box text-box_bg">
+                    <h2 class="book-title">행복하냐는 질문에 대답할 수 없다면</h2>
+                    <p class="book-writer">알랭 드 보통, 인생학교 / 미래엔아이세움</p>
+                    <p class="book-des">힘들고 지친 당신을 위한 15가지 깨달음</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-3 slide_3">
+                <div class="inner">
+                  <div class="tag-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>과학소설</span>
+                      </li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29229/10/cover500/8934921579_2.jpg" alt="">
+                  </div>
+                  <div class="text-box text-box_bg">
+                    <h2 class="book-title">씨앗을 뿌리는 사람의 우화</h2>
+                    <p class="book-writer">옥타비아 버틀러 / 비채</p>
+                    <p class="book-des">날카로운 통찰과 상상력으로 완성한 가장 현실적인 디스토피아</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-4 slide_4">
+                <div class="inner">
+                  <div class="tag-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>한국소설</span>
+                      </li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29168/99/cover500/k022837474_1.jpg" alt="">
+                  </div>
+                  <div class="text-box text-box_bg">
+                    <h2 class="book-title">안녕 주정뱅이 (리커버 특별판)</h2>
+                    <p class="book-writer">권여선 / 창비</p>
+                    <p class="book-des">인생이 던지는 잔혹한 농담</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-5 slide_5">
+                <div class="inner">
+                  <div class="tag-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>육아</span>
+                      </li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29251/29/cover500/k252837395_1.jpg" alt="">
+                  </div>
+                  <div class="text-box text-box_bg">
+                    <h2 class="book-title">아, 육아란 원래 이런 거구나!</h2>
+                    <p class="book-writer">마이클렌 다우클레프 / 시프</p>
+                    <p class="book-des">자율적인 아이와 단단한 부모를 위한 천년의 육아법</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-6 slide_6">
+                <div class="inner">
+                  <div class="tag-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>추리/미스터리소설</span>
+                      </li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/29168/95/cover500/k972837474_1.jpg" alt="">
+                  </div>
+                  <div class="text-box text-box_bg">
+                    <h2 class="book-title">시체를 보는 사나이 1부: 더 비기닝 1</h2>
+                    <p class="book-writer">공한K / 팩토리나인</p>
+                    <p class="book-des">이 시체가 모두 나에게만 보인다고?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-7 slide_7">
+                <div class="inner">
+                  <div class="tag-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>사회문제</span>
+                      </li>
+                      <li class="book-event">
+                        <span class="book-event_title">관련 이벤트</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/28430/37/cover500/k142835415_1.jpg" alt="">
+                  </div>
+                  <div class="text-box text-box_bg">
+                    <h2 class="book-title">유언을 만난 세계</h2>
+                    <p class="book-writer">정창조, 강혜민, 최예륜 외 / 오월의봄</p>
+                    <p class="book-des">장애해방열사, 죽어서도 여기 머무는 자</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-8 slide_8">
+                <div class="inner">
+                  <div class="tag-box">
+                    <ul>
+                      <li class="book-category">
+                        <span>인문 에세이</span>
+                      </li>
+                      <li class="book-event">
+                        <!-- <span class="book-event_title">관련 이벤트</span> -->
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-box">
+                    <img src="https://image.aladin.co.kr/product/28582/75/cover500/k432836986_1.jpg" alt="">
+                  </div>
+                  <div class="text-box text-box_bg">
+                    <h2 class="book-title">누구에게나 신이 필요한 순간이 있다</h2>
+                    <p class="book-writer">에릭 와이너 / 어크로스</p>
+                    <p class="book-des">아직 당신의 신을 만나지 못했나요?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-box">
+              <div class="swiper-button-next">
+                <img src="https://113midm.github.io/redesign_aladin/image/Arrow-next.svg" alt="">
+              </div>
+              <div class="swiper-button-prev">
+                <img src="https://113midm.github.io/redesign_aladin/image/Arrow-next.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-today">
+        <div class="container">
+          <div class="title">
+            <h1>오늘의 한 문장</h1>
+          </div>
+          <div class="inner inline-grid">
+            <div class="book-box">
+              <div class="book-img-box">
+                <div class="book-center">
+                  <div class="img-box">
+                    <img id="book-img-center" src="https://image.aladin.co.kr/product/29246/9/cover500/8932922055_1.jpg"
+                      alt="">
+                  </div>
+                </div>
+                <div class="book-right">
+                  <div class="img-box">
+                    <img id="book-img-right" src="https://image.aladin.co.kr/product/29231/77/cover500/k252837196_1.jpg"
+                      alt="">
+                  </div>
+                  <div class="text-box book-right">
+                    <ul>
+                      <li class="line">
+                        <span></span>
+                        <span></span>
+                      </li>
+                      <li class="book-title">더러운 손을 거기에 닦지 마</li>
+                      <li class="book-writer">아시자와 요 지음</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book-main">
+              <div class="text-box book-center active">
+                <p class="sent">호주에서 등교 거부 시위 조직에 앞장섰던 열다섯 살의 노스라트 파레하는 정치인들을 향해 이렇게 외쳤다. 「당신들은 우리 미래를
+                  짓뭉개고 있어요. 우리는 더 나은 미래를 원해요. 젊은 사람들은 투표조차 할 수 없는데 당신들이 아무 대응도 하지 않으면 그 결과는 고스란히 우리
+                  젊은이들 몫이 될 겁니다.」</p>
+                <h2 class="book-title">『미래가 우리 손을 떠나기 전에』</h2>
+                <h3 class="book-writer">나오미 클라인,리베카 스테포프 지음<br>이순희 옮김</h3>
+              </div>
+              <div class="text-box book-right">
+                <p class="sent">아내는 가스 불 끄는 것을 잊을까 두려워서 혼자 있을 때는 불을 사용하지 않는다. 하지만 이대로 증상이 진행되면 혼자 있을 때는
+                  불을 사용하지 않는다는 것 자체를 잊을지도 모른다.</p>
+                <h2 class="book-title">『더러운 손을 거기에 닦지 마』</h2>
+                <h3 class="book-writer">아시자와 요 지음<br>박정임 옮김</h3>
+              </div>
+              <div class="bg-box">
+                <img src="https://113midm.github.io/redesign_aladin/image/Croods%20Sitting-f.png" alt="">
+                <img src="https://113midm.github.io/redesign_aladin/image/Croods%20Sitting%20on%20Floor-m.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="today-bg"></div>
+      </div>
+      <div class="section-records">
+        <div class="container">
+          <div class="title">
+            <h1>알라딘 추천 음반</h1>
+            <ul class="float-grid">
+              <li><a href="#">화제의 신간</a></li>
+              <li><a href="#">주간 베스트셀러</a></li>
+              <li><a href="#">예약 음반</a></li>
+            </ul>
+          </div>
+          <div class="swiper-records">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-1 float-grid">
+                <div class="slide_1">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29307/50/cover500/c262936803_0.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 댄스뮤직</span>
+                          <span>가요 > 힙합</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">[키트 형태] 강승윤 - YG PALM STAGE 2021 [YOON : PASSAGE] KiT
+                        VIDEO [키노앨범]</h2>
+                      <p class="book-writer">강승윤 (KANG SEUNG YOON) / YG 플러스</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_2">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29288/74/cover500/c682936693_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 발라드/R&B</span>
+                          <span>LP > 가요</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">핫펠트 - LEFT LP [화이트 LP][한정반]</h2>
+                      <p class="book-writer">핫펠트(예은) / 스톤뮤직엔터테인먼트(Stone Music Ent.)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_3">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29299/11/cover500/c052936705_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 댄스뮤직</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">싸이 - 정규 9집 싸다9</h2>
+                      <p class="book-writer">싸이 (Psy) / 피네이션</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_4">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29308/15/cover500/c542936803_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>클래식 > 실내악</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">[수입] 풀랑 : 실내악 전집 [5CD]</h2>
+                      <p class="book-writer">풀랑크 (Francis Poulenc), 여러 아티스트 (Various Artists) /
+                        낙소스(NAXOS)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-2 float-grid">
+                <div class="slide_5">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29263/72/cover500/c532936398_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 댄스뮤직</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">[SET] 투모로우바이투게더 - 미니 4집 minisode 2: Thursday's Child
+                        [HATE+END+MESS Ver.]</h2>
+                      <p class="book-writer">투모로우바이투게더 (TOMORROW X TOGETHER) / BIGHIT MUSIC / YG
+                        PLUS</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_6">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29283/30/cover500/c792936596_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>O.S.T. > TV 드라마음악</span>
+                          <span>LP > O.S.T.</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">그 해 우리는 O.S.T [LP] (2차 판매분)</h2>
+                      <p class="book-writer">십센치 (10cm), 여러 아티스트 (Various Artists) / 벅스</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_7">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29284/63/cover500/c852936597_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 힙합</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">스월비 - 정규 1집 Undercover Angel [일반반]</h2>
+                      <p class="book-writer">스월비 (Swervy) / 인터파크/뮤직앤뉴</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_8">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29266/17/cover500/c982936391_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 발라드/R&B</span>
+                          <span>LP > 가요</span>
+                        </li>
+                        <li class="book-event">
+                          <!-- <span class="book-event_title">관련 이벤트</span> -->
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">전람회 - 2집 [180g LP]</h2>
+                      <p class="book-writer">전람회 / 대영에이브이</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-3 float-grid">
+                <div class="slide_9">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/28999/75/cover500/c092936467_0.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 댄스뮤직</span>
+                          <span>LP > 가요</span>
+                        </li>
+                        <li class="book-event">
+                          <!-- <span class="book-event_title">관련 이벤트</span> -->
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">태연 - 정규 3집 INVU [BLUE / ORANGE 2LP][한정반]</h2>
+                      <p class="book-writer">태연 (TAEYEON) / SM 엔터테인먼트</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_10">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29300/27/cover500/c862936705_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 인디음악</span>
+                          <span>LP > 가요</span>
+                        </li>
+                        <li class="book-event">
+                          <!-- <span class="book-event_title">관련 이벤트</span> -->
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">백아 - 우주선 [140g BABY PINK 투명 LP]</h2>
+                      <p class="book-writer">백아BAEK A / 삼원기획</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_11">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29191/24/cover500/c322936183_1.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 성인가요/트로트</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">임영웅 - 정규 1집 IM HERO (GIFT Ver.) [한정반]</h2>
+                      <p class="book-writer">임영웅 / 드림어스</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_12">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/29232/26/cover500/c932936891_0.jpg" alt="">
+                    </div>
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>가요 > 댄스뮤직</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="text-box">
+                      <h2 class="book-title">미연 - 미니 1집 MY</h2>
+                      <p class="book-writer">미연 ((여자)아이들) / Kakao Entertainment</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-event">
+        <div class="inner inline-grid">
+          <div class="title-box">
+            <div class="container">
+              <div class="title">
+                <div class="img-box">
+                  <img src="https://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif" alt="">
+                </div>
+                <h1>이 달의 이벤트</h1>
+              </div>
+              <div class="sub-title">
+                <ul>
+                  <li class="active"><a href="#">알라딘TV 북토크</a></li>
+                  <li><a href="#">적립금 꼭 챙기세요!</a></li>
+                  <li><a href="#">이 시간 굿즈 총집합</a></li>
+                  <li><a href="#">독보적챌린지+2200원</a></li>
+                  <li><a href="#">알라딘마켓-퀘스트적립금</a></li>
+                  <li><a href="#">책의 날 유리컵</a></li>
+                  <li><a href="#">외국도서! 느리게 읽기</a></li>
+                  <li><a href="#">피너츠 북스탠드</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="contents-box">
+            <!--           <div class="inner"> -->
+            <div class="swiper-event">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide-1">
+                  <img src="https://113midm.github.io/redesign_aladin/image/event-1-re.png" alt="">
+                  <button>신청하기 CLICK!</button>
+                </div>
+                <div class="swiper-slide slide-2">
+                  <img src="https://113midm.github.io/redesign_aladin/image/event-2-re.png" alt="">
+                  <button>퀴즈 참여하기</button>
+                  <button>투표 참여하기</button>
+                  <button>이벤트 보기</button>
+                  <button>앱 다운로드</button>
+                  <button>앱 다운로드</button>
+                  <button>구독하기</button>
+                  <button>이벤트 보기</button>
+                  <button>퀴즈 참여하기</button>
+                  <button>이벤트 보기</button>
+                </div>
+                <div class="swiper-slide slide-3">
+                  <img src="https://113midm.github.io/redesign_aladin/image/event-3-re.png" alt="">
+                  <ul class="float-grid">
+                    <li>
+                      <a href="#">
+                        <span><br>플립북 책갈피</span>
+                        <span>읽는 일과 쓰는 일</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span><br>북트래커, 밑줄 테이프</span>
+                        <span>사계절출판사 40주년 브랜드관</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span><br>원고지 노트</span>
+                        <span>이어령<br>&lt;거시기 머시기&gt;</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>투명 홀로그램 파우치<br>& 노트</span>
+                        <span>&lt;옥타비아 버틀러&gt;</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span><br>마켓백</span>
+                        <span>매일 매일 어린이날</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span><br>과학사 연표</span>
+                        <span>과학의 달</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>&lt;다섯 번째 감각&gt;<br>미니 금장 노트</span>
+                        <span>우리들의 작가, 김보영</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>일러스트 도자기<br>접시 2종</span>
+                        <span>&lt;박막례시피&gt;<br>봄 리커버 에디션</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span><br>바닥 그림 유리 머그</span>
+                        <span>예술의 정원</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>&lt;올리브 키터리지&gt;<br>유리컵</span>
+                        <span>&lt;올리브 키터리지&gt;<br>&lt;다시, 올리브&gt; 리커버<br>단독 판매</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span><br>특별 부록</span>
+                        <span>&lt;나의 비거니즘 만화&gt; 리커버 한정판</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="https://113midm.github.io/redesign_aladin/image/Close.svg" alt="">
+                        더보기
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide-4">
+                  <img src="https://113midm.github.io/redesign_aladin/image/event-4-re.png" alt="">
+                  <button>독보적 서비스 자세히 알아보기</button>
+                  <button>지난달 독보적 챌린지 확인</button>
+                </div>
+                <div class="swiper-slide slide-5">
+                  <img src="https://113midm.github.io/redesign_aladin/image/event-5-re.png" alt="">
+                  <button>자세히 보기</button>
+                </div>
+                <div class="swiper-slide slide-6">
+                  <img src="https://113midm.github.io/redesign_aladin/image/event-6-re.png" alt="">
+                  <button>INDEX : 원하는 주제를 골라보세요</button>
+                </div>
+                <div class="swiper-slide slide-7">
+                  <img src="https://113midm.github.io/redesign_aladin/image/event-7-re.png" alt="">
+                  <button>슬로우 미러클 카페</button>
+                </div>
+                <div class="swiper-slide slide-8">
+                  <img src="https://113midm.github.io/redesign_aladin/image/event-8-re.png" alt="">
+                </div>
+              </div>
+            </div>
+            <!--           </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="section-used">
+        <div class="container">
+          <div class="title">
+            <h1>알라딘 추천 중고상품</h1>
+            <ul class="float-grid">
+              <li><a href="#">주간 베스트셀러</a></li>
+              <li><a href="#">새로 들어온 상품</a></li>
+            </ul>
+          </div>
+          <div class="swiper-used">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-1 float-grid">
+                <div class="slide_1">
+                  <div class="inner">
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>한국소설</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/27877/5/cover500/k692835315_2.jpg" alt="">
+                    </div>
+                    <div class="text-box text-box_bg">
+                      <h2 class="book-title">작별하지 않는다</h2>
+                      <p class="book-writer">한강 / 문학동네</p>
+                      <p class="book-des">이것이 지극한 사랑에 대한 소설이기를 빈다.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_2">
+                  <div class="inner">
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>한국 과학소설</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/27692/63/cover500/s512837901_1.jpg" alt="">
+                    </div>
+                    <div class="text-box text-box_bg">
+                      <h2 class="book-title">지구 끝의 온실</h2>
+                      <p class="book-writer">김초엽 / 자이언트북스</p>
+                      <p class="book-des">당신이 이 세계를 아직 사랑하고 있다면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_3">
+                  <div class="inner">
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>한국소설</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/27802/70/cover500/k832734163_1.jpg" alt="">
+                    </div>
+                    <div class="text-box text-box_bg">
+                      <h2 class="book-title">재인, 재욱, 재훈 (리커버 에디션)</h2>
+                      <p class="book-writer">정세랑 / 은행나무</p>
+                      <p class="book-des">우리의 매일을 구하는 건 작고 우연한 상냥함이다</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_4">
+                  <div class="inner">
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>일본 추리/미스터리소설</span>
+                        </li>
+                        <li class="book-event">
+                          <!-- <span class="book-event_title">관련 이벤트</span> -->
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/28013/21/cover500/k852734936_1.jpg" alt="">
+                    </div>
+                    <div class="text-box text-box_bg">
+                      <h2 class="book-title">소문</h2>
+                      <p class="book-writer">오기와라 히로시 / 모모</p>
+                      <p class="book-des">“마지막 4글자에 모든 것이 뒤바뀐다!”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-2 float-grid">
+                <div class="slide_5">
+                  <div class="inner">
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>비룡소 플래닛</span>
+                        </li>
+                        <li class="book-event">
+                          <!-- <span class="book-event_title">관련 이벤트</span> -->
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/23400/44/cover500/8949135051_1.jpg" alt="">
+                    </div>
+                    <div class="text-box text-box_bg">
+                      <h2 class="book-title">내 친구 스누피 4</h2>
+                      <p class="book-writer">찰스 M. 슐츠 / 비룡소 플래닛</p>
+                      <p class="book-des">「내 친구 스누피」 원작 만화의 놀라운 기록</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_6">
+                  <div class="inner">
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>청소년 소설</span>
+                        </li>
+                        <li class="book-event">
+                          <span class="book-event_title">관련 이벤트</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/27609/43/cover500/k782733020_1.jpg" alt="">
+                    </div>
+                    <div class="text-box text-box_bg">
+                      <h2 class="book-title">우리가 농구에 미치는 이유</h2>
+                      <p class="book-writer">진 루엔 양 / 우리학교</p>
+                      <p class="book-des">『슬램 덩크』에 이어 ‘농구’ 하면 떠오를 대표적인 책이 탄생했다</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_7">
+                  <div class="inner">
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>독서에세이</span>
+                        </li>
+                        <li class="book-event">
+                          <!-- <span class="book-event_title">관련 이벤트</span> -->
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/20608/98/cover500/8998614707_1.jpg" alt="">
+                    </div>
+                    <div class="text-box text-box_bg">
+                      <h2 class="book-title">어른의 그림책</h2>
+                      <p class="book-writer">황유진 / 메멘토</p>
+                      <p class="book-des">마음의 온도를 재는 시간</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide_8">
+                  <div class="inner">
+                    <div class="tag-box">
+                      <ul>
+                        <li class="book-category">
+                          <span>한국에세이</span>
+                        </li>
+                        <li class="book-event">
+                          <!-- <span class="book-event_title">관련 이벤트</span> -->
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="img-box">
+                      <img src="https://image.aladin.co.kr/product/27876/43/cover500/k872734898_1.jpg" alt="">
+                    </div>
+                    <div class="text-box text-box_bg">
+                      <h2 class="book-title">우린 한낮에도 프리랜서를 꿈꾸지</h2>
+                      <p class="book-writer">박현아 / 세나북스</p>
+                      <p class="book-des">나만의 라이프스타일을 꿈꾸는 분들에게</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="resell-box">
+            <div class="inner inline-grid">
+              <ul class="input-box">
+                <li>중고상품 매입가를 조회해 보세요</li>
+                <li>
+                  <span>상품타입</span>
+                  <span>
+                    <span class="radio">
+                      <input type="radio" id="resell-1" name="resell" checked="true"><label for="resell-1">국내도서</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="resell-2" name="resell"><label for="resell-2">외국도서</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="resell-3" name="resell"><label for="resell-3">음반</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="resell-4" name="resell"><label for="resell-4">DVD/블루레이</label>
+                    </span>
+                  </span>
+                </li>
+                <li>
+                  <span>상품명 또는 ISBN</span>
+                  <span>
+                    <input type="text"><button>검색</button>
+                  </span>
+                </li>
+                <li>스마트폰으로 바코드를 촬영하면 중고로 팔 수 있어요</li>
+              </ul>
+              <ul class="inform-box">
+                <li>조회한 매입 예상가, 매입 여부는 실제 매입가와 다를 수 있습니다.</li>
+                <li>
+                  <ul>
+                    <li>·조회한 매입 예상가는 현재의 정가에 대한 것으로, 동일 ISBN의 구정가의 경우 실제 매입가가 낮아질 수 있습니다.</li>
+                    <li>·매입가와 판매 가능 여부는 실시간으로 변경되므로 매장 방문 시점에 상품의 적정 재고량을 초과하면 매입가가 내려가거나 매입되지 않을 수
+                      있습니다. (온라인 매입은 접수완료 시간 기준)</li>
+                    <li>·매입 가능한 상품이어도 상품의 품질 상태에 따라 매입불가일 수 있습니다. </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>매입불가 품질 상태 자세히 보기</span>
+                  <span>중고매장 FAQ</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="map-title">
+          <div class="container">
+            <h1>전국 알라딘 중고매장</h1>
+          </div>
+        </div>
+        <div class="map-contents">
+          <div class="container inline-grid">
+            <div class="map-box">
+              <div class="img-box">
+                <img src="https://113midm.github.io/redesign_aladin/image/map.png" alt="">
+                <div class="point-box">
+                  <button class="incheon">
+                    <span>인천광역시</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="seoul">
+                    <span>서울특별시</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="gangwon no-store">
+                    <span>강원도</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="gyeonggi">
+                    <span>경기도</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="chungbuk no-store">
+                    <span>충청북도</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="chungnam no-store">
+                    <span>충청남도</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="daejeon">
+                    <span>대전광역시</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="gyeongbuk no-store">
+                    <span>경상북도</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="jeonbuk">
+                    <span>전라북도</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="daegu">
+                    <span>대구광역시</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="ulsan">
+                    <span>울산광역시</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="gwangju">
+                    <span>광주광역시</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="gyeongnam">
+                    <span>경상남도</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="busan">
+                    <span>부산광역시</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="jeonnam no-store">
+                    <span>전라남도</span>
+                    <span class="point"></span>
+                  </button>
+                  <button class="jeju no-store">
+                    <span>제주도</span>
+                    <span class="point"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="list-box">
+              <ul class="float-grid list-box-1">
+                <div class="title-box">
+                  <span class="title">서울특별시</span>
+                  <span>해당 지점명을 선택하시면 보유도서를 검색할 수 있습니다.</span>
+                </div>
+                <li>가로수길점</li>
+                <li>강남점</li>
+                <li class="lh-130">강서<br>홈플러스점</li>
+                <li>건대점</li>
+                <li>노원역점</li>
+                <li>대학로점</li>
+                <li class="lh-130">서울대<br>입구역점</li>
+                <li>수유점</li>
+                <li>신림점</li>
+                <li>신촌점</li>
+                <li>연신내점</li>
+                <li class="lh-130">영등포<br>타임스퀘어점</li>
+                <li>이수역점</li>
+                <li class="lh-130">잠실롯데<br>월드타워점</li>
+                <li class="lh-130">잠실<br>새내역점</li>
+                <li>종로점</li>
+                <li>합정점</li>
+              </ul>
+              <ul class="float-grid list-box-2">
+                <div class="title-box">
+                  <span class="title">경기도</span>
+                </div>
+                <li class="lh-130">동탄2<br>하나로마트점</li>
+                <li>동탄점</li>
+                <li>부천점</li>
+                <li class="lh-130">분당<br>서현점</li>
+                <li class="lh-130">분당<br>야탑점</li>
+                <li>산본점</li>
+                <li class="lh-130">수원<br>시청역점</li>
+                <li>수원점</li>
+                <li>일산점</li>
+                <li>화정점</li>
+              </ul>
+              <ul class="float-grid list-box-3">
+                <div class="title-box">
+                  <span class="title">광역시 등</span>
+                </div>
+                <li class="lh-130 gwangju">광주<br>상무점</li>
+                <li class="lh-130 gwangju">광주<br>충장로점</li>
+                <li class="gyeongnam">김해점</li>
+                <li class="lh-130 daegu">대구<br>동성로점</li>
+                <li class="lh-130 daegu">대구<br>상인점</li>
+                <li class="lh-130 daejeon">대전<br>시청역점</li>
+                <li class="lh-130 daejeon">대전<br>은행점</li>
+                <li class="daegu">동대구역점</li>
+                <li class="lh-130 gyeongnam">마산<br>합성점</li>
+                <li class="lh-130 busan">부산 경성대<br>부경대역점</li>
+                <li class="lh-130 busan">부산<br>덕천점</li>
+                <li class="lh-130 busan">부산<br>서면점</li>
+                <li class="lh-130 busan">부산<br>센텀점</li>
+                <li class="ulsan">울산점</li>
+                <li class="lh-130 incheon">인천 계산<br>홈플러스점</li>
+                <li class="lh-130 incheon">인천<br>구월점</li>
+                <li class="lh-130 incheon">인천<br>송도점</li>
+                <li class="jeonbuk">전주점</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="notice">
+        <div class="container float-grid">
+          <div class="title">
+            <h1>공지사항</h1>
+          </div>
+          <div class="swiper-notice">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-1">
+                <span>[채용공고] 총무팀 사무보조 계약직</span>
+              </div>
+              <div class="swiper-slide slide-2">
+                <span>[채용공고] 고객센터 고객상담원</span>
+              </div>
+              <div class="swiper-slide slide-3">
+                <span>장바구니 내역 정비(2022.4.19.화. 02시-07시)</span>
+              </div>
+              <div class="swiper-slide slide-4">
+                <span>[채용공고] 개발센터 정보보안 담당자</span>
+              </div>
+              <div class="swiper-slide slide-5">
+                <span>해외배송(DHL) 운임료 일부 인상(2022년 4월 11일)</span>
+              </div>
+            </div>
+            <div class="swiper-button-box">
+              <div class="swiper-button-next">
+                <img src="https://113midm.github.io/redesign_aladin/image/Arrow-next.svg" alt="">
+              </div>
+              <div class="swiper-button-prev">
+                <img src="https://113midm.github.io/redesign_aladin/image/Arrow-next.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="corp">
+        <div class="container">
+          <ul class="footer-menu">
+            <div>
+              <li>회사소개</li>
+              <li>이용약관</li>
+              <li>개인정보처리방침</li>
+              <li>청소년 보호정책</li>
+              <li>중고매장</li>
+              <li>제휴/마케팅 안내</li>
+              <li>판매자 매니저</li>
+              <li>출판사/공급사 안내</li>
+              <li>광고 안내</li>
+              <li>학교/기업 대량구매</li>
+            </div>
+          </ul>
+          <div class="biz">
+            <div class="img-box">
+              <img src="https://image.aladin.co.kr/img/footer/2013/foot_aladin_01.gif" alt="">
+            </div>
+            <ul>
+              <li>(주)알라딘커뮤니케이션</li>
+              <li>
+                <span>대표이사 : 최우경</span><span>고객정보보호 책임자 : 최우경</span>
+              </li>
+              <li>
+                <span>사업자등록 : 201-81-23094</span><span class="text-deco">E-mail :
+                  privacy@aladin.co.kr</span>
+              </li>
+              <li>
+                <span>통신판매업신고 : 중구01520호</span><span>호스팅 제공자 : 알라딘커뮤니케이션</span>
+              </li>
+              <li>
+                <span>(본사) 서울시 중구 서소문로 89-31</span><span class="text-deco">(중고매장) 자세히보기</span>
+              </li>
+              <li>(고객센터) 서울시 마포구 백범로 71 숨도빌딩 7층, Fax 02-6926-2600</li>
+              <li>ⓒ Aladin Communication. All Rights Reserved.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="btn-to-top">
+        <button>▲</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
