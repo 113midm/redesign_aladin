@@ -25,7 +25,7 @@ function Topbar_init() {
   $(window).scroll(function () {
     let scroll_top = $(this).scrollTop();
 
-    console.log(scroll_top);
+    // console.log(scroll_top);
 
     if (scroll_top > 194) {
       $(".top-bar").addClass("active");
