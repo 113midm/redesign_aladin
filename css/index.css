@@ -41,21 +41,6 @@ button {
 input:focus {
   outline: none;
 }
-
-/* ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background-color: transparent;
-}
-::-webkit-scrollbar-thumb {
-  height: 8px;
-  border-radius: 0;
-  background-color: var(--main-color-blue);
-}
-::-webkit-scrollbar-track {
-  border-radius: 0;
-  background-color: transparent;
-} */
 /* library */
 :root {
   --main-color-blue: #002c6a;
@@ -110,12 +95,6 @@ body {
   max-width: 1200px;
   width: 100%;
   min-width: 300px;
-}
-
-@media (max-width: 428px) {
-  #wrap {
-    /*     background: #ddd; */
-  }
 }
 
 /* 
@@ -673,14 +652,6 @@ popup-category
   }
 }
 
-@media (max-width: 428px) {
-  .popup-category .text li>a {
-    /*     font-size: 12px; */
-    /*     font-size: 70%; */
-    /*     line-height: 180%; */
-  }
-}
-
 /* 
 
 
@@ -763,16 +734,13 @@ header_mobile-bar
 }
 
 .header_mobile-menu>.inner>.body {
-  /* margin-top: 40px; */
   height: calc(100% - 40px);
 }
 
 .header_mobile-menu>.inner>.body>.logo {
-  /* width: 40%; */
   width: 30%;
   margin-left: auto;
   margin-right: auto;
-  /* margin-bottom: 10px; */
   margin-bottom: 20px;
 }
 
@@ -811,16 +779,10 @@ header_mobile-bar
 
 .header_mobile-menu>.inner>.body>.service {
   margin-top: 20px;
-  /* display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; */
 }
 
 .header_mobile-menu>.inner>.body>.service>li {
-  /* width: calc((100% / 2) - 4px); */
   width: 100%;
-  /* height: 45px; */
-  /* margin-bottom: 8px; */
 }
 
 .header_mobile-menu>.inner>.body>.service>li:nth-child(odd) {
@@ -834,20 +796,13 @@ header_mobile-bar
   line-height: 3;
   padding: 2%;
   padding-left: 5%;
-  /* line-height: 150%; */
   font-size: 12px;
   font-weight: bold;
-  /* text-align: center; */
-  /* padding: 4px 0px; */
-  /* border-radius: 5px; */
-  /* background-color: #ddd; */
-  /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3); */
   border-bottom: 1px solid var(--main-color-blue);
   color: var(--main-color-blue);
 }
 
 .header_mobile-menu>.inner>.footer>.customer {
-  /* background-color: var(--main-color-blue); */
   background-color: var(--text-color);
   position: absolute;
   left: 0;
@@ -881,15 +836,6 @@ header_mobile-bar
 .header_mobile-menu>.inner>.footer>.customer>li:nth-child(2)>span:last-child {
   color: var(--main-color-yellow);
 }
-
-/* .header_mobile-menu>.inner>.footer>.customer>li:last-child {
-  border-bottom: none;
-  border-top: 1px solid #fff;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  padding-top: 8px;
-  margin-top: 4px;
-} */
 
 @media (min-width: 768px) {
   .header_mobile-bar {
@@ -1826,7 +1772,6 @@ section-today 내용 부분 > 책 세트
 
 .section-today>div>.inner>.book-box>.book-img-box>.book-right>.text-box .line>span {
   margin-right: auto;
-  /*   margin-left: -10px; */
 }
 
 .section-today>div>.inner>.book-box>.book-img-box>.book-right>.text-box .line>span:first-child {
@@ -4057,23 +4002,22 @@ btn-to-top
   }
 
   .notice>div>.swiper-notice>.swiper-button-box>div {
-    /*     top: 76%; */
     width: 35px;
     display: inline-block;
   }
 
   .notice>div>.swiper-notice>.swiper-button-box>.swiper-button-next {
-    top: 96%;
+    top: 85%;
     right: -11px;
   }
 
   .notice>div>.swiper-notice>.swiper-button-box>.swiper-button-prev {
-    top: 60%;
+    top: 83%;
     left: 0px;
   }
 
   .notice>div>.swiper-notice>.swiper-button-box>div::before {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
 
   .notice>div>.swiper-notice .swiper-slide>span {
