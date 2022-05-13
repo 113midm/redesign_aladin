@@ -42,6 +42,20 @@ input:focus {
   outline: none;
 }
 
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  height: 8px;
+  border-radius: 0;
+  background-color: var(--main-color-blue);
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: transparent;
+} */
 /* library */
 :root {
   --main-color-blue: #002c6a;
@@ -96,6 +110,12 @@ body {
   max-width: 1200px;
   width: 100%;
   min-width: 300px;
+}
+
+@media (max-width: 428px) {
+  #wrap {
+    /*     background: #ddd; */
+  }
 }
 
 /* 
@@ -248,7 +268,7 @@ header_search > header_side-menu
 }
 
 .header_side-menu .btn-customer {
-  background: url(../image/Headset\ mic.svg) no-repeat;
+  background: url(https://113midm.github.io/redesign_aladin/image/Headset\ mic.png) no-repeat;
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -515,7 +535,6 @@ popup-category
   transform: translateY(0%);
   opacity: 1;
   visibility: visible;
-  overflow-y: scroll;
 }
 
 .popup-category>div {
@@ -654,6 +673,14 @@ popup-category
   }
 }
 
+@media (max-width: 428px) {
+  .popup-category .text li>a {
+    /*     font-size: 12px; */
+    /*     font-size: 70%; */
+    /*     line-height: 180%; */
+  }
+}
+
 /* 
 
 
@@ -732,18 +759,19 @@ header_mobile-bar
   height: 100%;
   padding: 20px;
   background-color: #fff;
-  position: relative;
 }
 
 .header_mobile-menu>.inner>.body {
+  margin-top: 40px;
   height: calc(100% - 40px);
+  position: relative;
 }
 
 .header_mobile-menu>.inner>.body>.logo {
-  width: 30%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .header_mobile-menu>.inner>.body>.login {
@@ -768,23 +796,28 @@ header_mobile-bar
 }
 
 .header_mobile-menu>.inner>.body>.login>li:first-child>button {
-  background-image: url(../image/ic_round-face.svg);
+  background-image: url(https://113midm.github.io/redesign_aladin/image/ic_round-face.png);
 }
 
 .header_mobile-menu>.inner>.body>.login>li:nth-child(2)>button {
-  background-image: url(../image/ic_round-contact-page.svg);
+  background-image: url(https://113midm.github.io/redesign_aladin/image/ic_round-face.png);
 }
 
 .header_mobile-menu>.inner>.body>.login>li:last-child>button {
-  background-image: url(../image/Shopping\ cart.svg);
+  background-image: url(https://113midm.github.io/redesign_aladin/image/Shopping\ cart.png);
 }
 
 .header_mobile-menu>.inner>.body>.service {
-  margin-top: 20px;
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .header_mobile-menu>.inner>.body>.service>li {
-  width: 100%;
+  width: calc((100% / 2) - 4px);
+  height: 45px;
+  margin-bottom: 8px;
 }
 
 .header_mobile-menu>.inner>.body>.service>li:nth-child(odd) {
@@ -794,32 +827,34 @@ header_mobile-bar
 .header_mobile-menu>.inner>.body>.service>li>a {
   display: block;
   height: 100%;
-  width: 100%;
-  line-height: 3;
-  padding: 2%;
-  padding-left: 5%;
-  font-size: 12px;
+  line-height: 130%;
+  font-size: 14px;
   font-weight: bold;
-  border-bottom: 1px solid var(--main-color-blue);
+  text-align: center;
+  padding: 4px 0px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
   color: var(--main-color-blue);
 }
 
-.header_mobile-menu>.inner>.footer>.customer {
-  background-color: var(--text-color);
+.header_mobile-menu>.inner>.body>.customer {
+  background-color: var(--main-color-blue);
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 20px;
+  bottom: 10px;
   padding: 10px 10px;
 }
 
-.header_mobile-menu>.inner>.footer>.customer>li,
-.header_mobile-menu>.inner>.footer>.customer>li>span {
+.header_mobile-menu>.inner>.body>.customer>li,
+.header_mobile-menu>.inner>.body>.customer>li>span {
   color: #fff;
 }
 
-.header_mobile-menu>.inner>.footer>.customer>li:first-child {
-  font-size: 14px;
+.header_mobile-menu>.inner>.body>.customer>li:first-child,
+.header_mobile-menu>.inner>.body>.customer>li:last-child {
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   padding-bottom: 8px;
@@ -827,18 +862,23 @@ header_mobile-bar
   border-bottom: 1px solid #fff;
 }
 
-.header_mobile-menu>.inner>.footer>.customer>li:nth-child(2) {
-  padding-left: 5%;
-}
-
-.header_mobile-menu>.inner>.footer>.customer>li:nth-child(2)>span {
+.header_mobile-menu>.inner>.body>.customer>li:nth-child(2)>span {
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
   width: 100%;
 }
 
-.header_mobile-menu>.inner>.footer>.customer>li:nth-child(2)>span:last-child {
+.header_mobile-menu>.inner>.body>.customer>li:nth-child(2)>span:last-child {
   color: var(--main-color-yellow);
+}
+
+.header_mobile-menu>.inner>.body>.customer>li:last-child {
+  border-bottom: none;
+  border-top: 1px solid #fff;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  padding-top: 8px;
+  margin-top: 4px;
 }
 
 @media (min-width: 768px) {
@@ -1311,7 +1351,7 @@ section-slide > slide-title
   }
 
   .section-slide .swiper-slide .text-box>ul>.book-title {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .section-slide .swiper-slide .text-box>ul>.book-writer {
@@ -1319,9 +1359,9 @@ section-slide > slide-title
   }
 
   .section-slide .swiper-slide .text-box>ul>.book-des {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 130%;
-    height: 107px;
+    height: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -1354,7 +1394,6 @@ section-recom
 
 .section-recom>div>.title {
   margin-bottom: 32px;
-  position: relative;
 }
 
 .section-recom>div>.title>h1 {
@@ -1372,8 +1411,6 @@ section-recom
 
 .section-recom>div>.title>.keywords {
   position: absolute;
-  top: 130%;
-  left: 0;
 }
 
 .section-recom>div>.title>.keywords>li {
@@ -1551,10 +1588,6 @@ section-recom
     transition: all 0.3s;
   }
 
-  .section-recom>div>.title>.keywords {
-    top: 115%;
-  }
-
   .section-recom>div>.swiper-recom {
     height: 502px;
   }
@@ -1606,9 +1639,8 @@ section-recom
   }
 
   .section-recom>div>.swiper-recom {
-    top: -150px;
-    height: 613px;
-    overflow: hidden;
+    top: -112px;
+    height: 620px;
   }
 
   .section-recom .swiper-wrapper {
@@ -1617,37 +1649,6 @@ section-recom
 
   .section-recom>div>.swiper-recom>.swiper-button-box {
     display: none;
-  }
-
-  .section-recom>div>.swiper-recom .swiper-slide .tag-box .book-category>span,
-  .section-recom>div>.swiper-recom .swiper-slide .tag-box .book-event>.book-event_title {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 428px) {
-  * {
-    transition: all 0.3s;
-  }
-
-  .section-recom>div>.title>h1 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .section-recom>div>.title>p {
-    font-size: 13px;
-  }
-
-  .section-recom>div>.title>.keywords>li {
-    font-size: 12px;
-    margin-right: 15px;
-    line-height: 28px;
-  }
-
-  .section-recom>div>.swiper-recom .swiper-slide .text-box {
-    height: 30%;
-    padding: 25px 30px;
   }
 }
 
@@ -1785,6 +1786,7 @@ section-today 내용 부분 > 책 세트
 
 .section-today>div>.inner>.book-box>.book-img-box>.book-right>.text-box .line>span {
   margin-right: auto;
+  /*   margin-left: -10px; */
 }
 
 .section-today>div>.inner>.book-box>.book-img-box>.book-right>.text-box .line>span:first-child {
@@ -2052,62 +2054,41 @@ section-today 내용 부분 > 책 내용
     transition: all 0.3s;
   }
 
-  .section-today {
-    margin-top: -20%;
-  }
-
   .section-today>div>.inner {
-    height: 540px;
+    height: 650px;
   }
 
   .section-today>div>.title>h1 {
     margin-right: 30px;
-    font-size: 16px;
-  }
-
-  .section-today>div>.inner>.book-box {
-    height: 295px;
+    font-size: 20px;
   }
 
   .section-today>div>.inner>.book-box>.book-img-box>.book-center {
-    top: 25px;
     left: 5%;
   }
 
   .section-today>div>.inner>.book-box>.book-img-box>.book-right {
-    top: 20px;
     left: 30%;
   }
 
   .section-today>div>.inner>.book-box>.book-img-box .img-box>img {
-    width: 200px;
+    width: 250px;
   }
 
   .section-today>div>.inner>.book-main {
     padding-left: 20px;
-    bottom: 92px;
   }
 
   .section-today>div>.inner>.book-main>.text-box>.sent {
-    height: 80px;
-    font-size: 13px;
-  }
-
-  .section-today>div>.inner>.book-main>.text-box>.book-title {
-    font-size: 14px;
+    height: 88px;
   }
 
   .section-today>div>.inner>.book-main>.text-box>.book-writer {
     margin-bottom: 30px;
-    font-size: 12px;
   }
 
   .section-today>.today-bg {
-    height: 239px;
-  }
-
-  .section-today>.today-bg::after {
-    bottom: -29px;
+    height: 230px;
   }
 }
 
@@ -2316,17 +2297,12 @@ section-records
     transition: all 0.3s;
   }
 
-  .section-records>div {
-    margin-bottom: 72px;
-  }
-
   .section-records>div>.title>h1 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .section-records>div>.title {
     padding-left: 0px;
-    padding-top: 0px;
   }
 
   .section-records>div>.title li {
@@ -2338,7 +2314,7 @@ section-records
   }
 
   .section-records>div>.title li>a {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .section-records>div>.swiper-records div[class^="slide_"] {
@@ -2348,14 +2324,6 @@ section-records
 
   .section-records>div>.swiper-records div[class^="slide_"]:nth-child(2n) {
     display: none;
-  }
-
-  .section-records>div>.swiper-records .text-box>.book-title {
-    font-size: 15px;
-  }
-
-  .section-records>div>.swiper-records .tag-box>ul>li>span {
-    font-size: 12px !important;
   }
 }
 
@@ -2836,10 +2804,6 @@ section-event
     text-align: center;
   }
 
-  .section-event>.inner>.title-box .title>h1 {
-    font-size: 16px;
-  }
-
   .section-event>.inner>.title-box>.container>.sub-title {
     margin-top: 12px;
   }
@@ -2849,8 +2813,7 @@ section-event
   }
 
   .section-event>.inner>.title-box>.container>.sub-title a {
-    font-size: 12px;
-    line-height: 30px;
+    font-size: 13px;
   }
 }
 
@@ -3351,7 +3314,7 @@ map
   }
 
   .section-used .resell-box .input-box>li:first-child {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .section-used .resell-box .input-box>li>span:first-child {
@@ -3364,7 +3327,7 @@ map
   }
 
   .section-used .resell-box .inform-box>li:first-child {
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 0px;
   }
 
@@ -3487,19 +3450,6 @@ map
     transform: translateY(0%);
   }
 
-  .section-used>div>.swiper-used .text-box {
-    height: 30%;
-    padding: 15px 30px;
-  }
-
-  .section-used>div>.swiper-used .text-box>.book-title {
-    font-size: 15px;
-  }
-
-  .section-used>div>.swiper-used .text-box>.book-writer {
-    font-size: 13px;
-  }
-
   .section-used .resell-box>.inner>ul {
     display: block;
     width: 100%;
@@ -3561,20 +3511,16 @@ map
     transition: all 0.3s;
   }
 
-  .section-used .map-title h1 {
-    font-size: 16px;
-  }
-
   .section-used>div>.title {
     margin-bottom: 24px;
   }
 
   .section-used>div>.title>h1 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .section-used>div>.title li>a {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .section-used>div>.title li:nth-child(1) {
@@ -3593,10 +3539,6 @@ map
 
   .section-used>div>.swiper-used div[class^="slide_"]:nth-child(2n) {
     display: none;
-  }
-
-  .section-used>div>.swiper-used .tag-box .book-category>span {
-    font-size: 12px;
   }
 
   .section-used .resell-box>.inner {
@@ -3639,7 +3581,7 @@ map
 
   .section-used .map-title {
     padding: 10px;
-    margin-top: 40px;
+    margin-top: 72px;
     margin-bottom: 10px;
   }
 
@@ -3649,7 +3591,7 @@ map
   }
 
   .section-used .map-contents>div>.list-box>ul>li {
-    font-size: 13px;
+    font-size: 14px;
     width: calc((100% / 3) - 8px);
     padding: 2px 0px;
     margin: 2px 4px;
@@ -3888,14 +3830,6 @@ btn-to-top
     margin-bottom: 10px;
   }
 
-  .notice>div>.title>h1 {
-    font-size: 16px;
-  }
-
-  .notice>div>.swiper-notice>div>.swiper-slide>span {
-    font-size: 13px;
-  }
-
   .notice>div>.swiper-notice>.swiper-button-box {
     top: 0px;
     right: 0px;
@@ -3904,22 +3838,23 @@ btn-to-top
   }
 
   .notice>div>.swiper-notice>.swiper-button-box>div {
+    /*     top: 76%; */
     width: 35px;
     display: inline-block;
   }
 
   .notice>div>.swiper-notice>.swiper-button-box>.swiper-button-next {
-    top: 80%;
+    top: 96%;
     right: -11px;
   }
 
   .notice>div>.swiper-notice>.swiper-button-box>.swiper-button-prev {
-    top: 83%;
+    top: 60%;
     left: 0px;
   }
 
   .notice>div>.swiper-notice>.swiper-button-box>div::before {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   .notice>div>.swiper-notice .swiper-slide>span {
@@ -3932,9 +3867,5 @@ btn-to-top
 
   .corp>div>.footer-menu>div>li {
     width: calc(100% / 3);
-    font-weight: normal;
-  }
-  .corp>div>.biz li, .corp>div>.biz li>span {
-    font-size: 10px;
   }
 }

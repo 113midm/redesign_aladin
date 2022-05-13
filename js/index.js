@@ -25,7 +25,7 @@ function Topbar_init() {
   $(window).scroll(function () {
     let scroll_top = $(this).scrollTop();
 
-    console.log(scroll_top);
+    // console.log(scroll_top);
 
     if (scroll_top > 194) {
       $(".top-bar").addClass("active");
@@ -106,13 +106,6 @@ function Topbar_scroll_4() {
     return false;
   });
 }
-Header_init();
-Topbar_init();
-Topbar_scroll_0();
-Topbar_scroll_1();
-Topbar_scroll_2();
-Topbar_scroll_3();
-Topbar_scroll_4();
 
 $(".header_mobile-bar").click(function () {
   if ($(".header_mobile-menu").hasClass("active")) {
@@ -159,7 +152,6 @@ function SectionSlide_init() {
     swiper_main_slide.slideTo(4, 1000, false);
   });
 }
-SectionSlide_init();
 
 function SectionRecom_init() {
   //'추천 마법사' 슬라이드
@@ -202,7 +194,6 @@ function SectionRecom_init() {
     }
   });
 }
-SectionRecom_init();
 
 function SectionToday_init() {
   //'오늘의 한 문장' 책 클릭하면 해당 내용으로 변함
@@ -288,7 +279,6 @@ function SectionToday_init() {
     }
   });
 }
-SectionToday_init();
 
 function SectionRecords_init() {
   //'추천 음반' 슬라이드
@@ -323,7 +313,6 @@ function SectionRecords_init() {
     swiper_records.slideTo(3, 1000, false);
   });
 }
-SectionRecords_init();
 
 function SectionEvent_init() {
   //'이벤트 슬라이드'
@@ -374,7 +363,6 @@ function SectionEvent_init() {
     swiper_event.slideTo(8, 1000, false);
   });
 }
-SectionEvent_init();
 
 function SectionUsed_init() {
   //'중고' 슬라이드
@@ -514,7 +502,6 @@ function SectionUsed_init() {
     }
   });
 }
-SectionUsed_init();
 
 function FooterNotice_init() {
   //'추천 마법사' 슬라이드
@@ -556,5 +543,18 @@ function BtnToTop_init() {
     return false;
   });
 }
+Header_init();
+Topbar_init();
+Topbar_scroll_0();
+Topbar_scroll_1();
+Topbar_scroll_2();
+Topbar_scroll_3();
+Topbar_scroll_4();
+SectionSlide_init();
+SectionRecom_init();
+SectionToday_init();
+SectionRecords_init();
+SectionEvent_init();
+SectionUsed_init();
 FooterNotice_init();
 BtnToTop_init();
